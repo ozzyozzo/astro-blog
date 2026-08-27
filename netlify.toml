@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[context.production.environment]
+  # Enable demo mode for the showcase site
+  # Must be PUBLIC_ prefixed for Astro client-side access
+  PUBLIC_ENABLE_DEMO = "true"
+
+[context.deploy-preview.environment]
+  PUBLIC_ENABLE_DEMO = "true"
