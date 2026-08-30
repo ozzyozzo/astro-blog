@@ -3,10 +3,10 @@
 
 export const siteConfig = {
   // The basics
-  title: "Dotfiles",
+  title: "ozzyozzo",
   description: "A minimal, terminal-inspired blog theme for developers",
-  author: "Your Name",
-  siteUrl: "https://yourdomain.com",
+  author: "Peter Castro",
+  siteUrl: "https://ozzyozzo.vercel.app/",
 
   // Header navigation
   header: {
@@ -17,12 +17,12 @@ export const siteConfig = {
     ],
     
     // Let visitors change the color theme?
-    showThemeSwitcher: false,
+    showThemeSwitcher: true,
   },
 
   // Homepage hero
   hero: {
-    title: "Dotfiles",
+    title: "OzzyOzzO",
     
     // These rotate with a typewriter effect
     typewriterLines: [
@@ -33,7 +33,7 @@ export const siteConfig = {
     // Wrap words in **asterisks** to highlight them
     description: "A theme for **developers**, **writers**, and **creators**.",
     
-    terminalTitle: "welcome",
+    terminalTitle: "bienvenido",
     
     // primary: true = filled button
     ctaButtons: [
