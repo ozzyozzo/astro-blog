@@ -22,7 +22,7 @@ We live in our keyboards. Tab, Enter, Escape, Ctrl+K. If I can't navigate withou
 
 ### 3. Fast Load Times
 
-We know how long things *should* take. A 3-second load for a documentation site is unacceptable.
+We know how long things _should_ take. A 3-second load for a documentation site is unacceptable.
 
 ### 4. Dark Mode
 
@@ -31,6 +31,7 @@ This isn't optional. Many of us work in dim environments and stare at screens al
 ### 5. Readable Code Examples
 
 If you're showing code:
+
 - Use a good monospace font
 - Add syntax highlighting
 - Make it copyable
@@ -41,6 +42,7 @@ If you're showing code:
 ### The Terminal Aesthetic
 
 Why does it resonate? Because it signals:
+
 - "This is for technical users"
 - Minimalism and focus
 - No-nonsense functionality

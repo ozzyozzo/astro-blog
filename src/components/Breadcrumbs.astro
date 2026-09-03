@@ -9,7 +9,7 @@ interface Props {
   class?: string;
 }
 
-const { items, class: className = '' } = Astro.props;
+const { items, class: className = "" } = Astro.props;
 ---
 
 <nav class:list={["font-mono text-sm", className]} aria-label="Breadcrumb">
@@ -17,19 +17,21 @@ const { items, class: className = '' } = Astro.props;
     <li>
       <a href="/" class="hover:text-primary transition-colors">~</a>
     </li>
-    {items.map((item, index) => (
-      <>
-        <li class="text-muted-foreground/50">/</li>
-        <li>
-          {item.href ? (
-            <a href={item.href} class="hover:text-primary transition-colors">
-              {item.label}
-            </a>
-          ) : (
-            <span class="text-foreground">{item.label}</span>
-          )}
-        </li>
-      </>
-    ))}
+    {
+      items.map((item, index) => (
+        <>
+          <li class="text-muted-foreground/50">/</li>
+          <li>
+            {item.href ? (
+              <a href={item.href} class="hover:text-primary transition-colors">
+                {item.label}
+              </a>
+            ) : (
+              <span class="text-foreground">{item.label}</span>
+            )}
+          </li>
+        </>
+      ))
+    }
   </ol>
 </nav>

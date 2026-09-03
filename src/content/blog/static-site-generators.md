@@ -81,11 +81,13 @@ Modern static sites aren't purely static. You can:
 ## Performance Wins
 
 My old Next.js blog:
+
 - First Contentful Paint: 1.8s
 - Time to Interactive: 3.2s
 - Lighthouse: 74
 
 My new Astro blog:
+
 - First Contentful Paint: 0.4s
 - Time to Interactive: 0.5s
 - Lighthouse: 100

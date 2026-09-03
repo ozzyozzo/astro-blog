@@ -1,7 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import TerminalHeader from '../components/TerminalHeader.astro';
-import { siteConfig } from '../config';
+import Layout from "../layouts/Layout.astro";
+import TerminalHeader from "../components/TerminalHeader.astro";
+import { siteConfig } from "../config";
 ---
 
 <Layout title={`404 - Not Found | ${siteConfig.title}`}>
@@ -21,36 +21,43 @@ import { siteConfig } from '../config';
             <span class="terminal-prompt">$</span>
             <span class="terminal-command ml-2">cd {Astro.url.pathname}</span>
           </div>
-          
+
           <div class="text-destructive font-mono text-lg mb-4">
             bash: cd: {Astro.url.pathname}: No such file or directory
           </div>
-          
-          <div class="text-8xl font-bold font-mono text-primary mb-6">
-            404
-          </div>
-          
+
+          <div class="text-8xl font-bold font-mono text-primary mb-6">404</div>
+
           <p class="text-muted-foreground mb-6">
             The page you're looking for doesn't exist or has been moved.
           </p>
-          
+
           <div class="mb-4 font-mono text-sm text-muted-foreground">
             <span class="terminal-prompt">$</span>
             <span class="ml-2">Try one of these:</span>
           </div>
-          
+
           <div class="flex flex-wrap justify-center gap-4 font-mono text-sm">
-            <a href="/" class="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">
+            <a
+              href="/"
+              class="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
+            >
               [go home]
             </a>
-            <a href="/blog" class="px-4 py-2 border border-border rounded hover:bg-card transition-colors">
+            <a
+              href="/blog"
+              class="px-4 py-2 border border-border rounded hover:bg-card transition-colors"
+            >
               [read blog]
             </a>
-            <a href="/projects" class="px-4 py-2 border border-border rounded hover:bg-card transition-colors">
+            <a
+              href="/projects"
+              class="px-4 py-2 border border-border rounded hover:bg-card transition-colors"
+            >
               [view projects]
             </a>
           </div>
-          
+
           <div class="flex items-center justify-center mt-6">
             <span class="terminal-prompt">$</span>
             <span class="terminal-cursor ml-2"></span>

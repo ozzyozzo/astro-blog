@@ -15,7 +15,7 @@ export const siteConfig = {
       { text: "Blog", href: "/blog" },
       { text: "Projects", href: "/projects" },
     ],
-    
+
     // Let visitors change the color theme?
     showThemeSwitcher: true,
   },
@@ -23,23 +23,23 @@ export const siteConfig = {
   // Homepage hero
   hero: {
     title: "dotfiles",
-    
+
     // These rotate with a typewriter effect
     typewriterLines: [
       "A minimal, terminal-inspired blog theme",
-      "Built with Astro 5.x and Tailwind CSS v4"
+      "Built with Astro 5.x and Tailwind CSS v4",
     ],
-    
+
     // Wrap words in **asterisks** to highlight them
     description: "A theme for **developers**, **writers**, and **creators**.",
-    
+
     terminalTitle: "bienvenido",
-    
+
     // primary: true = filled button
     ctaButtons: [
       { text: "[blog]", href: "/blog", primary: true },
       { text: "[projects]", href: "/projects", primary: false },
-      { text: "[about]", href: "/about", primary: false }
+      { text: "[about]", href: "/about", primary: false },
     ],
   },
 
@@ -81,18 +81,19 @@ export const siteConfig = {
     items: [
       {
         name: "my-awesome-project",
-        description: "A brief description of what this project does and why it's cool.",
+        description:
+          "A brief description of what this project does and why it's cool.",
         tech: ["Astro", "Tailwind", "TypeScript"],
         status: "active",
         url: "https://example.com",
-        github: "https://github.com/you/repo"
+        github: "https://github.com/you/repo",
       },
       {
         name: "another-project",
         description: "Another great project you've worked on.",
         tech: ["React", "Node.js"],
         status: "shipped",
-        github: "https://github.com/you/repo"
+        github: "https://github.com/you/repo",
       },
     ],
   },
@@ -133,7 +134,7 @@ export const siteConfig = {
   // Set to true to show theme switcher for demo purposes
   // Automatically enabled on Netlify via PUBLIC_ENABLE_DEMO env var
   demo: {
-    enabled: import.meta.env.PUBLIC_ENABLE_DEMO === 'true' || false,
+    enabled: import.meta.env.PUBLIC_ENABLE_DEMO === "true" || false,
   },
 };
 

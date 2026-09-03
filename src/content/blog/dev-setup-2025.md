@@ -19,6 +19,7 @@ Every year, I refine my development setup. Here's what I'm using in 2025.
 ### Shell: zsh with Oh My Zsh
 
 Plugins I can't live without:
+
 - `git` - Git aliases and completion
 - `z` - Jump to frequent directories
 - `autosuggestions` - Fish-like autosuggestions
@@ -72,6 +73,7 @@ With ligatures enabled. `->` becomes → and `!=` becomes ≠.
 ## Browser: Arc
 
 The sidebar tabs changed how I work. I have workspaces for:
+
 - Development (localhost, docs)
 - Research (articles, Stack Overflow)
 - Personal (email, calendar)
@@ -108,6 +110,7 @@ git config --global alias.lg "log --oneline --graph"
 Everything is version controlled in a dotfiles repo. New machine setup takes about 30 minutes.
 
 Key files:
+
 - `.zshrc` - Shell config
 - `.gitconfig` - Git settings
 - `.config/starship.toml` - Prompt config

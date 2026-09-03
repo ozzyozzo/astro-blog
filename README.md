@@ -42,46 +42,46 @@ export const siteConfig = {
   description: "What you're about",
   author: "Your Name",
   siteUrl: "https://yoursite.com",
-  
+
   hero: {
     title: "Your Name",
     typewriterLines: ["What you do", "Where you work"],
     description: "I build **things** and write about **stuff**.",
     ctaButtons: [
       { text: "Read Blog", href: "/blog", isPrimary: true },
-      { text: "About Me", href: "/about", isPrimary: false }
-    ]
+      { text: "About Me", href: "/about", isPrimary: false },
+    ],
   },
-  
+
   social: {
     github: "https://github.com/you",
-    twitter: "https://twitter.com/you"
+    twitter: "https://twitter.com/you",
   },
-  
+
   theme: {
-    defaultTheme: "clean-white"  // or any of the 14 themes
-  }
+    defaultTheme: "clean-white", // or any of the 14 themes
+  },
 };
 ```
 
 ## Available Themes
 
-| Theme | Style |
-|-------|-------|
-| `clean-white` | Light (default) |
-| `catppuccin-mocha` | Dark |
-| `catppuccin-latte` | Light |
-| `rose-pine` | Dark |
-| `rose-pine-dawn` | Light |
-| `nord` | Dark |
-| `nord-light` | Light |
-| `dracula` | Dark |
-| `solarized-dark` | Dark |
-| `solarized-light` | Light |
-| `gruvbox-dark` | Dark |
-| `gruvbox-light` | Light |
-| `tokyo-night` | Dark |
-| `tokyo-night-light` | Light |
+| Theme               | Style           |
+| ------------------- | --------------- |
+| `clean-white`       | Light (default) |
+| `catppuccin-mocha`  | Dark            |
+| `catppuccin-latte`  | Light           |
+| `rose-pine`         | Dark            |
+| `rose-pine-dawn`    | Light           |
+| `nord`              | Dark            |
+| `nord-light`        | Light           |
+| `dracula`           | Dark            |
+| `solarized-dark`    | Dark            |
+| `solarized-light`   | Light           |
+| `gruvbox-dark`      | Dark            |
+| `gruvbox-light`     | Light           |
+| `tokyo-night`       | Dark            |
+| `tokyo-night-light` | Light           |
 
 ## Writing Content
 
@@ -127,11 +127,7 @@ title: "About"
 Some intro text here.
 
 <Terminal title="~/.profile">
-  **Name** Your Name  
-  **Role** Developer
-  
-  - Skill one
-  - Skill two
+  **Name** Your Name **Role** Developer - Skill one - Skill two
 </Terminal>
 
 More content outside the terminal.
@@ -150,9 +146,9 @@ projects: {
       title: "My Project",
       description: "What it does",
       link: "https://github.com/you/project",
-      tags: ["TypeScript", "React"]
-    }
-  ]
+      tags: ["TypeScript", "React"],
+    },
+  ];
 }
 ```
 
@@ -173,25 +169,28 @@ src/
 ## Deploy
 
 ### Vercel
+
 ```bash
 npx vercel
 ```
 
 ### Netlify
+
 ```bash
 npx netlify deploy --prod
 ```
 
 ### Cloudflare Pages
+
 Connect your GitHub repo in Cloudflare dashboard.
 
 ## Commands
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start dev server at localhost:4321 |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
+| Command           | Description                        |
+| ----------------- | ---------------------------------- |
+| `npm run dev`     | Start dev server at localhost:4321 |
+| `npm run build`   | Build for production               |
+| `npm run preview` | Preview production build           |
 
 ## Requirements
 

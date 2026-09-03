@@ -27,9 +27,15 @@ This theme is built with:
 The classic red/yellow/green buttons immediately signal "this is a terminal." We use them throughout the design to frame content:
 
 ```css
-.terminal-button-red { background-color: #ff5f56; }
-.terminal-button-yellow { background-color: #ffbd2e; }
-.terminal-button-green { background-color: #27ca40; }
+.terminal-button-red {
+  background-color: #ff5f56;
+}
+.terminal-button-yellow {
+  background-color: #ffbd2e;
+}
+.terminal-button-green {
+  background-color: #27ca40;
+}
 ```
 
 ### The Blinking Cursor
@@ -38,8 +44,14 @@ Nothing says "terminal" like a blinking cursor. It's subtle but adds life to the
 
 ```css
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 ```
 

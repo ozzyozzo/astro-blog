@@ -1,20 +1,20 @@
 /* JetBrains Mono for terminal aesthetic */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Inter:wght@400;500;600;700&display=swap");
 
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @font-face {
-  font-family: 'Geist';
-  src: url('/fonts/Geist-Variable.woff2') format('woff2');
+  font-family: "Geist";
+  src: url("/fonts/Geist-Variable.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Geist Mono';
-  src: url('/fonts/GeistMono-Variable.woff2') format('woff2');
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Variable.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -46,17 +46,17 @@
   --color-border: #e0e0e0;
   --color-input: #e0e0e0;
   --color-ring: #0066cc;
-  
+
   /* Terminal-specific colors */
   --color-terminal-prompt: #22863a;
   --color-terminal-command: #b08800;
   --color-terminal-cursor: #dc2626;
 
   --radius: 0.5rem;
-  
+
   /* Font families */
-  --font-sans: 'Inter', 'Geist', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Geist Mono', monospace;
+  --font-sans: "Inter", "Geist", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Geist Mono", monospace;
 }
 
 /* Clean White Theme (default - same as @theme base) */
@@ -80,7 +80,7 @@
   --color-border: #e0e0e0;
   --color-input: #e0e0e0;
   --color-ring: #0066cc;
-  
+
   --color-terminal-prompt: #22863a;
   --color-terminal-command: #b08800;
   --color-terminal-cursor: #dc2626;
@@ -110,7 +110,7 @@
   --color-border: #45475a;
   --color-input: #45475a;
   --color-ring: #cba6f7;
-  
+
   --color-terminal-prompt: #a6e3a1;
   --color-terminal-command: #f9e2af;
   --color-terminal-cursor: #f38ba8;
@@ -137,7 +137,7 @@
   --color-border: #bcc0cc;
   --color-input: #bcc0cc;
   --color-ring: #8839ef;
-  
+
   --color-terminal-prompt: #40a02b;
   --color-terminal-command: #df8e1d;
   --color-terminal-cursor: #d20f39;
@@ -166,7 +166,7 @@
   --color-border: #26233a;
   --color-input: #26233a;
   --color-ring: #c4a7e7;
-  
+
   --color-terminal-prompt: #9ccfd8;
   --color-terminal-command: #f6c177;
   --color-terminal-cursor: #eb6f92;
@@ -192,7 +192,7 @@
   --color-border: #dfdad9;
   --color-input: #dfdad9;
   --color-ring: #907aa9;
-  
+
   --color-terminal-prompt: #56949f;
   --color-terminal-command: #ea9d34;
   --color-terminal-cursor: #b4637a;
@@ -221,7 +221,7 @@
   --color-border: #4c566a;
   --color-input: #4c566a;
   --color-ring: #88c0d0;
-  
+
   --color-terminal-prompt: #a3be8c;
   --color-terminal-command: #ebcb8b;
   --color-terminal-cursor: #bf616a;
@@ -247,7 +247,7 @@
   --color-border: #d8dee9;
   --color-input: #d8dee9;
   --color-ring: #5e81ac;
-  
+
   --color-terminal-prompt: #a3be8c;
   --color-terminal-command: #d08770;
   --color-terminal-cursor: #bf616a;
@@ -276,7 +276,7 @@
   --color-border: #6272a4;
   --color-input: #6272a4;
   --color-ring: #bd93f9;
-  
+
   --color-terminal-prompt: #50fa7b;
   --color-terminal-command: #f1fa8c;
   --color-terminal-cursor: #ff5555;
@@ -305,7 +305,7 @@
   --color-border: #586e75;
   --color-input: #586e75;
   --color-ring: #268bd2;
-  
+
   --color-terminal-prompt: #859900;
   --color-terminal-command: #b58900;
   --color-terminal-cursor: #dc322f;
@@ -331,7 +331,7 @@
   --color-border: #93a1a1;
   --color-input: #93a1a1;
   --color-ring: #268bd2;
-  
+
   --color-terminal-prompt: #859900;
   --color-terminal-command: #cb4b16;
   --color-terminal-cursor: #dc322f;
@@ -360,7 +360,7 @@
   --color-border: #504945;
   --color-input: #504945;
   --color-ring: #fabd2f;
-  
+
   --color-terminal-prompt: #b8bb26;
   --color-terminal-command: #fabd2f;
   --color-terminal-cursor: #fb4934;
@@ -386,7 +386,7 @@
   --color-border: #bdae93;
   --color-input: #bdae93;
   --color-ring: #b57614;
-  
+
   --color-terminal-prompt: #79740e;
   --color-terminal-command: #b57614;
   --color-terminal-cursor: #9d0006;
@@ -415,7 +415,7 @@
   --color-border: #414868;
   --color-input: #414868;
   --color-ring: #7aa2f7;
-  
+
   --color-terminal-prompt: #9ece6a;
   --color-terminal-command: #e0af68;
   --color-terminal-cursor: #f7768e;
@@ -441,7 +441,7 @@
   --color-border: #9699a3;
   --color-input: #9699a3;
   --color-ring: #34548a;
-  
+
   --color-terminal-prompt: #485e30;
   --color-terminal-command: #8f5e15;
   --color-terminal-cursor: #8c4351;
@@ -478,7 +478,12 @@ mark {
 }
 
 /* All headings use monospace by default */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-mono);
 }
 
@@ -509,8 +514,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
 /* Terminal window chrome */
@@ -541,9 +552,15 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
 }
 
-.terminal-button-red { background-color: #ff5f56; }
-.terminal-button-yellow { background-color: #ffbd2e; }
-.terminal-button-green { background-color: #27ca40; }
+.terminal-button-red {
+  background-color: #ff5f56;
+}
+.terminal-button-yellow {
+  background-color: #ffbd2e;
+}
+.terminal-button-green {
+  background-color: #27ca40;
+}
 
 .terminal-content {
   padding: 1.5rem;
@@ -567,9 +584,15 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-accent);
 }
 
-.status-dot-red { background-color: #ff5f56; }
-.status-dot-yellow { background-color: #ffbd2e; }
-.status-dot-green { background-color: #27ca40; }
+.status-dot-red {
+  background-color: #ff5f56;
+}
+.status-dot-yellow {
+  background-color: #ffbd2e;
+}
+.status-dot-green {
+  background-color: #27ca40;
+}
 
 /* ============================================
    PROSE TYPOGRAPHY - Readable body text!

@@ -71,18 +71,18 @@ greet("Developer");
 
 ## Text Formatting
 
-**Bold text** is used for emphasis. *Italic text* for subtle emphasis. ***Bold and italic*** when you really mean it.
+**Bold text** is used for emphasis. _Italic text_ for subtle emphasis. _**Bold and italic**_ when you really mean it.
 
 You can also use ~~strikethrough~~ for deleted content.
 
 ## Tables
 
-| Feature | Status | Notes |
-|---------|--------|-------|
-| Typography | ✅ Complete | Multiple font weights |
-| Dark Mode | ✅ Complete | Multiple themes |
-| Responsive | ✅ Complete | Mobile-first |
-| Accessibility | 🚧 In Progress | WCAG compliance |
+| Feature       | Status         | Notes                 |
+| ------------- | -------------- | --------------------- |
+| Typography    | ✅ Complete    | Multiple font weights |
+| Dark Mode     | ✅ Complete    | Multiple themes       |
+| Responsive    | ✅ Complete    | Mobile-first          |
+| Accessibility | 🚧 In Progress | WCAG compliance       |
 
 ## Links
 

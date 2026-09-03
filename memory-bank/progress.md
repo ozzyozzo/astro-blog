@@ -7,6 +7,7 @@ Live demo at Netlify, code on GitHub. Just needs screenshot + Astro portal submi
 ## Completed Features ✅
 
 ### Distribution Setup
+
 - [x] GitHub repo created (public)
 - [x] Netlify deployment (live demo)
 - [x] Demo mode configured (OFF by default, ON for showcase)
@@ -14,6 +15,7 @@ Live demo at Netlify, code on GitHub. Just needs screenshot + Astro portal submi
 - [x] SUBMISSION_INFO with Astro portal steps
 
 ### Core Features
+
 - [x] 14 color themes
 - [x] Unified config system
 - [x] Blog posts (markdown)
@@ -25,12 +27,14 @@ Live demo at Netlify, code on GitHub. Just needs screenshot + Astro portal submi
 - [x] Memory Bank docs
 
 ### Deployment
+
 - [x] GitHub: [github.com/nabsiddiqui/dotfiles-astro-theme](https://github.com/nabsiddiqui/dotfiles-astro-theme)
 - [x] Netlify: [dotfiles-astro-theme.netlify.app](https://dotfiles-astro-theme.netlify.app)
 
 ## What's Left
 
 ### Astro Portal Submission
+
 - [ ] Take screenshot (1200×630px)
 - [ ] Go to portal.astro.build
 - [ ] Fill form, upload screenshot
@@ -39,6 +43,7 @@ Live demo at Netlify, code on GitHub. Just needs screenshot + Astro portal submi
 ## Session History
 
 ### Session 9 - Deployment & GitHub
+
 - ✅ GitHub CLI setup + authentication
 - ✅ Repo created and pushed
 - ✅ Netlify CLI setup + authentication
@@ -47,19 +52,21 @@ Live demo at Netlify, code on GitHub. Just needs screenshot + Astro portal submi
 - ✅ Memory bank updated
 
 ### Previous Sessions
+
 - Session 8: Terminal component, auto-import, markdown inside Terminal
 - Session 7: Unified config, pages collection
 - Session 6: 14 themes, comment cleanup
 
 ## URLs
 
-| Platform | URL | Demo Mode |
-|----------|-----|-----------|
-| GitHub | https://github.com/nabsiddiqui/dotfiles-astro-theme | OFF (default) |
-| Netlify | https://dotfiles-astro-theme.netlify.app | ON (showcase) |
-| Portal | https://portal.astro.build/themes/submit | - |
+| Platform | URL                                                 | Demo Mode     |
+| -------- | --------------------------------------------------- | ------------- |
+| GitHub   | https://github.com/nabsiddiqui/dotfiles-astro-theme | OFF (default) |
+| Netlify  | https://dotfiles-astro-theme.netlify.app            | ON (showcase) |
+| Portal   | https://portal.astro.build/themes/submit            | -             |
 
 ## Build Stats
+
 - **Pages**: 28
 - **Build Time**: ~800ms
 - **Themes**: 14

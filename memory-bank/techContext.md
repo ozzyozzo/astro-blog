@@ -2,16 +2,17 @@
 
 ## Stack
 
-| Technology | Version | Notes |
-|------------|---------|-------|
-| Astro | 5.1.1 | Static site generator |
-| Tailwind CSS | 4.0.0 | Vite plugin, not PostCSS |
-| TypeScript | 5.7.2 | Full type coverage |
-| Node.js | 18+ | Required |
+| Technology   | Version | Notes                    |
+| ------------ | ------- | ------------------------ |
+| Astro        | 5.1.1   | Static site generator    |
+| Tailwind CSS | 4.0.0   | Vite plugin, not PostCSS |
+| TypeScript   | 5.7.2   | Full type coverage       |
+| Node.js      | 18+     | Required                 |
 
 ## Dependencies
 
 ### Core
+
 - `astro` - Framework
 - `@tailwindcss/vite` - Tailwind v4 Vite integration
 - `@astrojs/sitemap` - Auto sitemap
@@ -19,6 +20,7 @@
 - `@astrojs/rss` - RSS feed
 
 ### Dev
+
 - `typescript` - Type checking
 - `clsx` + `tailwind-merge` - Class utilities
 
@@ -33,9 +35,11 @@ npm run preview  # Preview production build
 ## Astro 5 Notes
 
 ### Reserved Words
+
 - `layout` is reserved in frontmatter - use `style` instead
 
 ### Content Collections
+
 - Zod schemas in `src/content/config.ts`
 - `getCollection()` and `getEntry()` from `astro:content`
 
@@ -43,12 +47,12 @@ npm run preview  # Preview production build
 
 ```javascript
 // astro.config.mjs
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [tailwindcss()],
+  },
 });
 ```
 
@@ -64,14 +68,14 @@ export default defineConfig({
 
 ## File Locations
 
-| What | Where |
-|------|-------|
-| Config | `src/config.ts` |
-| Blog posts | `src/content/blog/*.md` |
-| Pages | `src/content/pages/*.md` or `*.mdx` |
-| Components | `src/components/*.astro` |
-| Themes (CSS) | `src/styles/globals.css` |
-| Collection schemas | `src/content/config.ts` |
+| What               | Where                               |
+| ------------------ | ----------------------------------- |
+| Config             | `src/config.ts`                     |
+| Blog posts         | `src/content/blog/*.md`             |
+| Pages              | `src/content/pages/*.md` or `*.mdx` |
+| Components         | `src/components/*.astro`            |
+| Themes (CSS)       | `src/styles/globals.css`            |
+| Collection schemas | `src/content/config.ts`             |
 
 ## Build Output
 
@@ -83,6 +87,7 @@ export default defineConfig({
 ## Deploy Targets
 
 Works on any static host:
+
 - Vercel: `npx vercel`
 - Netlify: `npx netlify deploy --prod`
 - Cloudflare Pages: Connect GitHub repo
@@ -92,4 +97,5 @@ Works on any static host:
 ```
 /fonts/Geist-Variable.woff2 didn't resolve at build time
 ```
+
 These are optional local fonts. Site works without them (falls back to system fonts).

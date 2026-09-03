@@ -5,6 +5,7 @@
 You need a live demo URL. Pick one:
 
 ### Vercel (Recommended)
+
 ```bash
 npm install -g vercel
 vercel
@@ -12,6 +13,7 @@ vercel
 ```
 
 ### Netlify
+
 ```bash
 npm install -g netlify-cli
 netlify deploy --prod
@@ -19,6 +21,7 @@ netlify deploy --prod
 ```
 
 ### Cloudflare Pages
+
 1. Push to GitHub
 2. Go to [Cloudflare Pages](https://pages.cloudflare.com)
 3. Connect repo, deploy
@@ -42,11 +45,13 @@ Make sure the repo is **public**.
 ## Step 3: Take a Screenshot
 
 Requirements:
+
 - **Size**: 1200×630px (or similar 1.91:1 ratio)
 - **Format**: PNG or Webe
 - **Content**: Homepage showing the theme in action
 
 Tips:
+
 - Use Chrome DevTools to set exact viewport size
 - Show the theme switcher with a few themes visible
 - Make sure text is readable
@@ -58,15 +63,15 @@ Tips:
 3. Click **"Submit Theme"**
 4. Fill in the form:
 
-| Field | Value |
-|-------|-------|
-| **Name** | Dotfiles |
+| Field           | Value                                                                                                                               |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Name**        | Dotfiles                                                                                                                            |
 | **Description** | A terminal-inspired Astro theme with 14 developer-favorite color palettes including Catppuccin, Nord, Dracula, Rosé Pine, and more. |
-| **GitHub URL** | https://github.com/nabsiddiqui/dotfiles-astro-theme |
-| **Demo URL** | (your deployed URL) |
-| **Categories** | Blog, Portfolio, Minimal |
-| **Tools** | Tailwind, TypeScript |
-| **Tags** | terminal, monospace, catppuccin, nord, dracula, dark-mode, light-mode |
+| **GitHub URL**  | https://github.com/nabsiddiqui/dotfiles-astro-theme                                                                                 |
+| **Demo URL**    | (your deployed URL)                                                                                                                 |
+| **Categories**  | Blog, Portfolio, Minimal                                                                                                            |
+| **Tools**       | Tailwind, TypeScript                                                                                                                |
+| **Tags**        | terminal, monospace, catppuccin, nord, dracula, dark-mode, light-mode                                                               |
 
 5. Upload your screenshot
 6. Submit for review
@@ -100,6 +105,7 @@ Once approved, your theme appears at [astro.build/themes](https://astro.build/th
 ### Keep It Updated
 
 Use the Developer Portal to update:
+
 - Screenshots
 - Description
 - Demo URL
@@ -108,9 +114,11 @@ Use the Developer Portal to update:
 ## Theme Info for Social Media
 
 **One-liner:**
+
 > Dotfiles - A terminal-inspired Astro theme with 14 color palettes including Catppuccin, Nord, and Dracula.
 
 **Features list:**
+
 - 14 built-in themes (light & dark)
 - Terminal-style design
 - Markdown/MDX pages

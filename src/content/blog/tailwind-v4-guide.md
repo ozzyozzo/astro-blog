@@ -19,7 +19,7 @@ Instead of a JavaScript config file, you now configure Tailwind directly in CSS:
 @theme {
   --color-primary: #e2777a;
   --color-background: #1a1a1a;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-mono: "JetBrains Mono", monospace;
 }
 ```
 
@@ -29,11 +29,11 @@ Tailwind v4 is now distributed as a Vite plugin:
 
 ```javascript
 // vite.config.js or astro.config.mjs
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 
 export default {
-  plugins: [tailwindcss()]
-}
+  plugins: [tailwindcss()],
+};
 ```
 
 ### 3. No More PostCSS Config
@@ -50,13 +50,13 @@ npm install tailwindcss @tailwindcss/vite
 
 ```javascript
 // astro.config.mjs
-import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [tailwindcss()],
+  },
 });
 ```
 
