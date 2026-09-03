@@ -3,7 +3,7 @@
 
 export const siteConfig = {
   // The basics
-  title: "ozzyozzo",
+  title: "dotfiles",
   description: "A minimal, terminal-inspired blog theme for developers",
   author: "Peter Castro",
   siteUrl: "https://ozzyozzo.vercel.app/",
@@ -22,7 +22,7 @@ export const siteConfig = {
 
   // Homepage hero
   hero: {
-    title: "OzzyOzzO",
+    title: "dotfiles",
     
     // These rotate with a typewriter effect
     typewriterLines: [
@@ -53,7 +53,7 @@ export const siteConfig = {
 
   // Your links (leave empty to hide)
   social: {
-    github: "https://github.com/nabsiddiqui",
+    github: "https://github.com/ozzyozzo",
     twitter: "",
     linkedin: "",
     bluesky: "",
