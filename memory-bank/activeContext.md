@@ -1,10 +1,40 @@
 # Active Context
 
+## Estado de ozzyozzo (actualizado 2026-09-19)
+
+Blog personal de Peter Castro sobre volver a programar con IA de copiloto. Lector principal: devs con experiencia que incorporan IA a su trabajo. Tono, audiencia y reglas de escritura en `~/dev/ai-framework/ai-astro-blog/foundation/`. Todo el contenido va en español neutro.
+
+### Hecho
+
+- Posts demo del tema eliminados.
+- Borradores `volvi-al-codigo` (presentación) y `mi-setup-2026`, ambos con `draft: true`.
+- `about`, `now` y `uses` reescritas en español. `now` y `uses` están en el menú.
+- `contact` movida al footer como `[contacto]`. La búsqueda es `[🔍]` en el menú.
+- Título del sitio y logo: `ozzyozzo`.
+
+### Pendientes
+
+- **Contact**: sigue con contenido demo (`hello@example.com`, "@yourusername"). Reescribir.
+- **Projects**: `/projects` muestra los proyectos de ejemplo de `src/config.ts`. Llenar con Foco Web (focoweb.cl), Foco Web Leads, Petermarket y Dash Usados. Prosales no se menciona.
+- **Paleta de comandos (⌘K)**: `src/components/CommandPalette.astro` tiene las rutas escritas a mano y en inglés (About, Projects, Search, Archives). No incluye `/now` ni `/uses`.
+- **Menú en inglés**: `[home]`, `[blog]`, `[projects]` (los dos últimos vienen de `coreNav` en `config.ts`).
+- **Menú mobile**: el desplegable repite `[🔍]`, que ya está en el header.
+- **Post `mi-setup-2026`**: quedan TODO en comentarios HTML (de dónde viene, por qué Omarchy, periféricos, cuándo usa VS Code, un problema con Claude Code, cierre). Después pasar a `draft: false`.
+- **Post `volvi-al-codigo`**: falta el TODO de enlaces (Foco Web es focoweb.cl; Petermarket sin URL todavía). Revisar las frases agregadas por la IA. Después pasar a `draft: false`.
+- **Producción vacía**: mientras los dos posts sean borradores, el blog publicado no muestra ningún post.
+- **Tagline** del hero ("devs, curiosos y familiares"): es más amplio que el lector principal. Decidir si se ajusta.
+- **Posts prometidos**: uno sobre obsidian-second-brain y otro sobre AI Foundation Framework.
+- **`astro check`** se queda colgado (probablemente falta `@astrojs/check`).
+
+---
+
+## Notas del tema original (Dotfiles)
+
 ## Current Focus
 
 Theme deployed with **dual-mode system**: GitHub users get clean version, Netlify demo shows all features.
 
-## Dual Deployment Strategy
+### Dual Deployment Strategy
 
 ### How It Works
 
@@ -34,7 +64,7 @@ demo: {
 - `netlify.toml` - Sets `PUBLIC_ENABLE_DEMO=true` for Netlify builds
 - `src/config.ts` - Reads env var, defaults to false
 
-## What's Live
+### What's Live
 
 ### Demo Site (Netlify)
 
@@ -48,7 +78,7 @@ demo: {
 - Theme switcher: ❌ OFF (by default)
 - Users get clean production theme
 
-## Recent Fixes (Session 9)
+### Recent Fixes (Session 9)
 
 ### Theme Switcher Visibility
 
@@ -63,18 +93,18 @@ demo: {
 - Astro reads `import.meta.env.PUBLIC_ENABLE_DEMO`
 - GitHub users get `false` by default
 
-## What's Left
+### What's Left
 
 1. Take screenshot (1200×630px of homepage)
 2. Submit to portal.astro.build
 
-## URLs
+### URLs
 
 - **GitHub**: https://github.com/nabsiddiqui/dotfiles-astro-theme
 - **Live Demo**: https://dotfiles-astro-theme.netlify.app
 - **Submit**: https://portal.astro.build/themes/submit
 
-## Build Status
+### Build Status
 
 - **GitHub**: ✅ Updated (demo OFF)
 - **Netlify**: ✅ Deployed (demo ON, theme names fixed)
