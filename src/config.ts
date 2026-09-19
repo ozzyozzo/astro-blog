@@ -3,7 +3,7 @@
 
 export const siteConfig = {
   // The basics
-  title: "dotfiles",
+  title: "ozzyozzo",
   description: "Peter Castro - Full Stack Dev.",
   author: "Peter Castro",
   siteUrl: "https://ozzyozzo.vercel.app/",
