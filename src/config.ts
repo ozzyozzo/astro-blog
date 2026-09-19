@@ -4,7 +4,7 @@
 export const siteConfig = {
   // The basics
   title: "dotfiles",
-  description: "A minimal, terminal-inspired blog theme for developers",
+  description: "Peter Castro - Full Stack Dev.",
   author: "Peter Castro",
   siteUrl: "https://ozzyozzo.vercel.app/",
 
@@ -17,29 +17,29 @@ export const siteConfig = {
     ],
 
     // Let visitors change the color theme?
-    showThemeSwitcher: true,
+    showThemeSwitcher: false,
   },
 
   // Homepage hero
   hero: {
-    title: "dotfiles",
+    title: "ozzyozzo",
 
     // These rotate with a typewriter effect
     typewriterLines: [
-      "A minimal, terminal-inspired blog theme",
-      "Built with Astro 5.x and Tailwind CSS v4",
+      "Volví al código ahora con canas y una IA de copiloto.",
+      "Notas de lo que probé, lo que falló y lo que quedó funcionando.",
     ],
 
     // Wrap words in **asterisks** to highlight them
-    description: "A theme for **developers**, **writers**, and **creators**.",
+    description: "Un blog para **devs**, **curiosos** y **familiares**.",
 
     terminalTitle: "bienvenido",
 
     // primary: true = filled button
     ctaButtons: [
       { text: "[blog]", href: "/blog", primary: true },
-      { text: "[projects]", href: "/projects", primary: false },
-      { text: "[about]", href: "/about", primary: false },
+      { text: "[proyectos]", href: "/projects", primary: false },
+      { text: "[sobre mí]", href: "/about", primary: false },
     ],
   },
 
@@ -48,13 +48,13 @@ export const siteConfig = {
     // clean-white, catppuccin-mocha, catppuccin-latte, rose-pine, rose-pine-dawn,
     // nord, nord-light, dracula, solarized-dark, solarized-light,
     // gruvbox-dark, gruvbox-light, tokyo-night, tokyo-night-light
-    defaultTheme: "clean-white",
+    defaultTheme: "tokyo-night",
   },
 
   // Your links (leave empty to hide)
   social: {
     github: "https://github.com/ozzyozzo",
-    twitter: "",
+    twitter: "https://x.com/_ozzy_ozzo",
     linkedin: "",
     bluesky: "",
     mastodon: "",
@@ -100,8 +100,8 @@ export const siteConfig = {
 
   // Footer
   footer: {
-    statusMessage: "All systems operational",
-    copyright: "© %YEAR% Your Name",
+    statusMessage: "Sistemas en línea",
+    copyright: "© %YEAR% Peter Castro",
     showSocialLinks: true,
   },
 
