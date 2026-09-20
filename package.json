@@ -1,17 +1,14 @@
 {
-  "name": "dotfiles-astro-theme",
+  "name": "ozzyozzo-blog",
   "type": "module",
   "version": "1.0.0",
-  "description": "A blog theme with terminal vibes and 14 color schemes",
-  "author": "Nabeel Siddiqui <nabeel@nabeelsiddiqui.net>",
+  "description": "Blog personal de Peter Castro — www.ozzyozzo.dev",
+  "author": "Peter Castro <peter.castro.g@gmail.com>",
   "license": "MIT",
   "keywords": [
     "astro",
-    "theme",
-    "terminal",
     "blog",
-    "portfolio",
-    "dotfiles"
+    "tailwind"
   ],
   "scripts": {
     "dev": "astro dev",

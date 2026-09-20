@@ -1,206 +1,92 @@
-# Dotfiles
+# ozzyozzo.dev
 
-A terminal-inspired blog theme for Astro with 14 developer-favorite color palettes.
+Mi blog personal, en [www.ozzyozzo.dev](https://www.ozzyozzo.dev). Hecho con Astro 5,
+Tailwind v4 y contenido en markdown.
 
-**[View Live Demo →](https://dotfiles-astro-theme.netlify.app)**
-
-![Dotfiles Theme](https://raw.githubusercontent.com/nabsiddiqui/dotfiles-astro-theme/main/public/screenshots/hero.png)
-
-## Features
-
-- **14 themes** - Catppuccin, Nord, Dracula, Rosé Pine, Gruvbox, Solarized, Tokyo Night
-- **Clean default** - Light theme for readability, dark themes for vibes
-- **Terminal aesthetic** - Command-style headers, monospace touches
-- **Content-driven** - Write pages in markdown or MDX
-- **RSS, search, SEO** - All built in
-- **TypeScript** - Full type safety
-- **Tailwind v4** - Latest utility-first CSS
-
-## Quick Start
+## Correr el proyecto
 
 ```bash
-# Clone the theme
-git clone https://github.com/nabsiddiqui/dotfiles-astro-theme.git my-blog
-cd my-blog
-
-# Install dependencies
 npm install
-
-# Start dev server
 npm run dev
 ```
 
-Open [localhost:4321](http://localhost:4321) to see your site.
+El sitio queda en `localhost:4321`.
 
-## Configuration
+## Configuración
 
-Everything lives in `src/config.ts`:
+Todo lo configurable vive en un solo archivo, `src/config.ts`: título, descripción, autor,
+`siteUrl`, navegación, tema por defecto, proyectos y las opciones de lectura.
 
-```typescript
-export const siteConfig = {
-  title: "Your Name",
-  description: "What you're about",
-  author: "Your Name",
-  siteUrl: "https://yoursite.com",
+## Escribir contenido
 
-  hero: {
-    title: "Your Name",
-    typewriterLines: ["What you do", "Where you work"],
-    description: "I build **things** and write about **stuff**.",
-    ctaButtons: [
-      { text: "Read Blog", href: "/blog", isPrimary: true },
-      { text: "About Me", href: "/about", isPrimary: false },
-    ],
-  },
+### Posts
 
-  social: {
-    github: "https://github.com/you",
-    twitter: "https://twitter.com/you",
-  },
-
-  theme: {
-    defaultTheme: "clean-white", // or any of the 14 themes
-  },
-};
-```
-
-## Available Themes
-
-| Theme               | Style           |
-| ------------------- | --------------- |
-| `clean-white`       | Light (default) |
-| `catppuccin-mocha`  | Dark            |
-| `catppuccin-latte`  | Light           |
-| `rose-pine`         | Dark            |
-| `rose-pine-dawn`    | Light           |
-| `nord`              | Dark            |
-| `nord-light`        | Light           |
-| `dracula`           | Dark            |
-| `solarized-dark`    | Dark            |
-| `solarized-light`   | Light           |
-| `gruvbox-dark`      | Dark            |
-| `gruvbox-light`     | Light           |
-| `tokyo-night`       | Dark            |
-| `tokyo-night-light` | Light           |
-
-## Writing Content
-
-### Blog Posts
-
-Add markdown files to `src/content/blog/`:
+Archivos markdown en `src/content/blog/`:
 
 ```markdown
 ---
-title: "My First Post"
-description: "What this post is about"
-date: "2025-01-15"
+title: "Mi primer post"
+description: "De qué se trata"
+date: "2026-01-15"
 tags: ["web", "astro"]
 ---
 
-Your content here.
+El contenido aquí.
 ```
 
-### Pages
+### Páginas
 
-Add pages to `src/content/pages/` (markdown or MDX):
+Markdown o MDX en `src/content/pages/`. Aparecen en la navegación automáticamente; para
+ocultar una, `hideFromNav: true` en su frontmatter.
 
-```markdown
----
-title: "About"
-description: "About me"
----
+### Terminal
 
-Regular markdown content here.
-```
-
-Pages show in navigation automatically. To hide one, add `hideFromNav: true`.
-
-### Terminal Chrome
-
-Use `<Terminal>` in MDX files to wrap content in a terminal window. No import needed:
+En archivos MDX, `<Terminal>` envuelve contenido en una ventana de terminal. No hace falta
+importarlo:
 
 ```mdx
----
-title: "About"
----
-
-Some intro text here.
-
 <Terminal title="~/.profile">
-  **Name** Your Name **Role** Developer - Skill one - Skill two
+  **Nombre** Peter Castro **Rol** Full Stack Dev
 </Terminal>
-
-More content outside the terminal.
 ```
 
-Markdown works inside `<Terminal>` - just write normally.
+Adentro el markdown funciona normal.
 
-### Projects
-
-Define projects in `src/config.ts`:
-
-```typescript
-projects: {
-  items: [
-    {
-      title: "My Project",
-      description: "What it does",
-      link: "https://github.com/you/project",
-      tags: ["TypeScript", "React"],
-    },
-  ];
-}
-```
-
-## Project Structure
+## Estructura
 
 ```text
 src/
-├── config.ts          # Site configuration
+├── config.ts          # Configuración del sitio
 ├── content/
-│   ├── blog/          # Blog posts (markdown)
-│   └── pages/         # Site pages (markdown/MDX)
-├── components/        # Reusable UI components
-├── pages/             # Route files
+│   ├── blog/          # Posts
+│   └── pages/         # Páginas
+├── components/        # Componentes
+├── pages/             # Rutas
 └── styles/
-    └── globals.css    # Theme colors & styles
+    └── globals.css    # Colores y estilos de los temas
 ```
+
+## Comandos
+
+| Comando           | Qué hace                                   |
+| ----------------- | ------------------------------------------ |
+| `npm run dev`     | Servidor de desarrollo en `localhost:4321` |
+| `npm run build`   | Build de producción                        |
+| `npm run preview` | Previsualiza el build                      |
+| `npm run check`   | Chequeo de tipos de Astro                  |
+| `npm run format`  | Prettier sobre todo el repo                |
+| `npm run lint:md` | markdownlint sobre los `.md`               |
 
 ## Deploy
 
-### Vercel
+Vercel, conectado al repo. El dominio `ozzyozzo.dev` redirige a `www.ozzyozzo.dev`, que es
+el host canónico y el que debe coincidir con `siteUrl` en `src/config.ts`.
 
-```bash
-npx vercel
-```
+## Créditos
 
-### Netlify
+Este sitio parte del tema **Dotfiles** de
+[Nabeel Siddiqui](https://nabeelsiddiqui.net), publicado bajo licencia MIT — ver
+[LICENSE](LICENSE), que conserva su copyright. El tema a su vez toma patrones de CSS de
+[AstroDeck](https://github.com/holger1411/astrodeck), de Holger Koenemann, también MIT.
 
-```bash
-npx netlify deploy --prod
-```
-
-### Cloudflare Pages
-
-Connect your GitHub repo in Cloudflare dashboard.
-
-## Commands
-
-| Command           | Description                        |
-| ----------------- | ---------------------------------- |
-| `npm run dev`     | Start dev server at localhost:4321 |
-| `npm run build`   | Build for production               |
-| `npm run preview` | Preview production build           |
-
-## Requirements
-
-- Node.js 18+
-- npm 9+
-
-## License
-
-MIT - Created by [Nabeel Siddiqui](https://nabeelsiddiqui.net)
-
----
-
-Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com)
+Construido con [Astro](https://astro.build) y [Tailwind CSS](https://tailwindcss.com).

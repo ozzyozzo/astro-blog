@@ -148,8 +148,8 @@ export const siteConfig = {
     pageTransitions: true,
   },
 
-  // Set to true to show theme switcher for demo purposes
-  // Automatically enabled on Netlify via PUBLIC_ENABLE_DEMO env var
+  // Muestra el selector de temas. Heredado del tema original, que lo encendia
+  // en su sitio de demo con PUBLIC_ENABLE_DEMO; aqui esa variable no se define.
   demo: {
     enabled: import.meta.env.PUBLIC_ENABLE_DEMO === "true" || false,
   },
