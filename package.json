@@ -19,7 +19,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "lint:md": "markdownlint \"**/*.md\" --ignore node_modules --ignore dist",
+    "lint:md": "markdownlint-cli2 \"**/*.md\" \"#node_modules\" \"#dist\"",
     "astro": "astro",
     "format": "prettier --write ."
   },
@@ -33,7 +33,7 @@
     "@astrojs/check": "^0.9.10",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.3.3",
-    "markdownlint-cli": "^0.49.1",
+    "markdownlint-cli2": "^0.23.3",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
     "tailwindcss": "^4.3.3",
