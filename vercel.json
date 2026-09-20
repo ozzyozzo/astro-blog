@@ -9,6 +9,8 @@
     { "source": "/contact", "destination": "/contacto", "permanent": true },
     { "source": "/uses", "destination": "/uso", "permanent": true },
     { "source": "/now", "destination": "/ahora", "permanent": true },
+    { "source": "/themes", "destination": "/", "permanent": true },
+    { "source": "/temas", "destination": "/", "permanent": true },
     {
       "source": "/tags/presentación",
       "destination": "/etiquetas/presentacion",
