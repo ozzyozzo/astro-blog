@@ -32,12 +32,10 @@ Para alguien que viene de administrar sistemas, eso tiene sentido. Un buen runbo
 
 Estos son los proyectos que salieron de estas primeras semanas:
 
-- **Foco Web**: una agencia de landing pages para oficios. Plomeros, electricistas, carpinteros, gente que trabaja bien pero que en internet casi no existe.
+- **[Foco Web](https://focoweb.cl)**: una agencia de landing pages para oficios. Plomeros, electricistas, carpinteros, gente que trabaja bien pero que en internet casi no existe.
 - **Foco Web Leads**: la parte que encuentra a esos clientes. Uso datos de Google para detectar emprendedores que tienen presencia en internet pero no tienen página web.
-- **Petermarket**: mi catálogo de productos usados.
+- **[Petermarket](https://petermarket.vercel.app)**: mi catálogo de productos usados.
 - **Dash Usados**: un dashboard para organizar lo que publico en Facebook. Tengo muchos artículos y estoy en muchos grupos, así que lo uso para llegar a más gente sin publicar tanto que Facebook me banee.
-
-<!-- TODO: enlaces a Foco Web y Petermarket si ya están en línea. -->
 
 Petermarket y Dash Usados nacieron de un problema mío, no de una idea de negocio. Dash Usados existe porque publicar a mano en tantos grupos era insoportable.
 
