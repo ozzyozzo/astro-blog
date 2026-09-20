@@ -10,6 +10,7 @@ import { siteConfig } from "./src/config.ts";
 export default defineConfig({
   // Single source of truth: edit siteUrl in src/config.ts
   site: siteConfig.siteUrl,
+  trailingSlash: "never",
   image: {
     service: passthroughImageService(),
   },
