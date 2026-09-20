@@ -97,9 +97,7 @@ git config --global alias.st status
 
 ## Navegador y notas
 
-- **Zen** es el navegador por defecto. **Chromium** lo tengo para probar.
+- **Zen** es mi navegador por defecto. **Chromium** lo tengo para probar.
 - **Obsidian** para notas. Con el plugin de Claude Code se convirtió en la memoria de mis sesiones.
 
 ---
-
-<!-- TODO: cierre. Una pregunta al lector o qué piensas cambiar el próximo año. Sin conclusión con moño. -->
