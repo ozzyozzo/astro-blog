@@ -14,7 +14,14 @@ export default defineConfig({
   image: {
     service: passthroughImageService(),
   },
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap({
+      // /temas es la pagina de demo del tema original: sigue accesible,
+      // pero no tiene por que aparecer en el sitemap.
+      filter: (page) => !page.startsWith(`${siteConfig.siteUrl}/temas`),
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },
