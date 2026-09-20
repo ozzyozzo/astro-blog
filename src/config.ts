@@ -26,9 +26,6 @@ export const siteConfig = {
       { text: "Blog", href: "/blog" },
       { text: "Proyectos", href: "/proyectos" },
     ],
-
-    // Let visitors change the color theme?
-    showThemeSwitcher: false,
   },
 
   // Terminal window chrome (tiling-WM style titlebar)
@@ -60,7 +57,7 @@ export const siteConfig = {
     ],
   },
 
-  // Color theme (see /temas for all options)
+  // Color theme (la lista completa esta en src/styles/globals.css)
   theme: {
     // clean-white, catppuccin-mocha, catppuccin-latte, rose-pine, rose-pine-dawn,
     // nord, nord-light, dracula, solarized-dark, solarized-light,
@@ -131,12 +128,6 @@ export const siteConfig = {
     showLineNumbers: false,
     showBreadcrumbs: true,
     pageTransitions: true,
-  },
-
-  // Muestra el selector de temas. Heredado del tema original, que lo encendia
-  // en su sitio de demo con PUBLIC_ENABLE_DEMO; aqui esa variable no se define.
-  demo: {
-    enabled: import.meta.env.PUBLIC_ENABLE_DEMO === "true" || false,
   },
 };
 

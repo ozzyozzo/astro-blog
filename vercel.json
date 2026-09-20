@@ -5,7 +5,6 @@
     { "source": "/projects", "destination": "/proyectos", "permanent": true },
     { "source": "/archives", "destination": "/archivo", "permanent": true },
     { "source": "/search", "destination": "/buscar", "permanent": true },
-    { "source": "/themes", "destination": "/temas", "permanent": true },
     { "source": "/about", "destination": "/sobre-mi", "permanent": true },
     { "source": "/contact", "destination": "/contacto", "permanent": true },
     { "source": "/uses", "destination": "/uso", "permanent": true },

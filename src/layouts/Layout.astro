@@ -46,19 +46,10 @@ const currentPath = Astro.url.pathname;
     <!-- Apply theme before paint to prevent flash -->
     <script is:inline data-default-theme={siteConfig.theme.defaultTheme}>
       (function () {
-        const defaultTheme =
+        // El tema sale solo de config.ts: ya no hay selector que lo cambie.
+        const theme =
           document.currentScript?.getAttribute("data-default-theme") ||
           "clean-white";
-
-        // A theme picked on /temas is stored in localStorage. If the default
-        // in config.ts changed since then, that stored value is stale: drop it
-        // so editing config.ts actually reaches returning visitors.
-        if (localStorage.getItem("theme-default") !== defaultTheme) {
-          localStorage.setItem("theme-default", defaultTheme);
-          localStorage.removeItem("theme");
-        }
-
-        const savedTheme = localStorage.getItem("theme") || defaultTheme;
         const lightThemes = [
           "clean-white",
           "catppuccin-latte",
@@ -68,12 +59,17 @@ const currentPath = Astro.url.pathname;
           "gruvbox-light",
           "tokyo-night-light",
         ];
-        const isLight = lightThemes.includes(savedTheme);
 
-        document.documentElement.setAttribute("data-theme", savedTheme);
-        if (!isLight) {
+        document.documentElement.setAttribute("data-theme", theme);
+        if (!lightThemes.includes(theme)) {
           document.documentElement.classList.add("dark");
         }
+
+        // Limpia lo que el selector dejo guardado en visitas anteriores.
+        try {
+          localStorage.removeItem("theme");
+          localStorage.removeItem("theme-default");
+        } catch (e) {}
       })();
     </script>
   </head>

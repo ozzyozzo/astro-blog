@@ -1,7 +1,6 @@
 ---
 // Site header with terminal-style nav
 // Pages from src/content/pages/ are auto-added
-import ThemeSwitcher from "./ThemeSwitcher.astro";
 import { siteConfig } from "../config";
 import { getCollection } from "astro:content";
 
@@ -77,25 +76,6 @@ const navItems: NavItem[] = [
       }
     </nav>
 
-    <!-- Desktop Actions -->
-    <div class="hidden md:flex items-center gap-2">
-      {
-        siteConfig.demo.enabled && (
-          <a
-            href="/temas"
-            class="font-mono text-sm text-muted-foreground hover:text-primary transition-colors"
-          >
-            [temas]
-          </a>
-        )
-      }
-      {
-        (siteConfig.header.showThemeSwitcher || siteConfig.demo.enabled) && (
-          <ThemeSwitcher />
-        )
-      }
-    </div>
-
     <!-- Mobile Menu Button -->
     <div class="flex md:hidden items-center gap-2">
       <a
@@ -149,16 +129,6 @@ const navItems: NavItem[] = [
       >
         [rss]
       </a>
-      {
-        siteConfig.demo.enabled && (
-          <a
-            href="/temas"
-            class="px-2 py-2 rounded transition-all hover:bg-primary/10 text-muted-foreground hover:text-primary"
-          >
-            [temas]
-          </a>
-        )
-      }
     </nav>
   </div>
 </header>
