@@ -20,11 +20,11 @@ const filteredHeadings = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
 {
   filteredHeadings.length > 0 && (
     <nav class="terminal-window mb-8">
-      <TerminalTitlebar path="~/toc.txt" />
+      <TerminalTitlebar path="~/indice.txt" />
       <div class="terminal-content">
         <div class="mb-2 font-mono text-sm">
           <span class="terminal-prompt">$</span>
-          <span class="terminal-command ml-2">cat toc.txt</span>
+          <span class="terminal-command ml-2">cat indice.txt</span>
         </div>
         <ul class="space-y-1 font-mono text-sm">
           {filteredHeadings.map((heading) => (

@@ -12,7 +12,7 @@ const blog = defineCollection({
   }),
 });
 
-// Pages like /about, /uses - just add markdown/mdx files
+// Pages like /sobre-mi, /uso - just add markdown/mdx files
 const pages = defineCollection({
   type: "content",
   schema: z.object({

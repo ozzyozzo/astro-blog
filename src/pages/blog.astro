@@ -27,7 +27,7 @@ const tags = getUniqueTags(posts);
         <p class="mt-2">
           {posts.length} posts encontrados.
           <a href="/rss.xml" class="text-primary hover:underline ml-2">[rss]</a>
-          <a href="/archives" class="text-primary hover:underline ml-2"
+          <a href="/archivo" class="text-primary hover:underline ml-2"
             >[archivo]</a
           >
         </p>
@@ -60,7 +60,7 @@ const tags = getUniqueTags(posts);
           {
             tags.map((tag) => (
               <a
-                href={`/tags/${tag}`}
+                href={`/etiquetas/${tag}`}
                 class="text-xs font-mono px-2 py-1 bg-secondary rounded text-muted-foreground hover:text-primary transition-colors"
               >
                 #{tag}

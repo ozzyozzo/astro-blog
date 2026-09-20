@@ -19,11 +19,10 @@ const { Content } = await page.render();
 
 // Command displayed in the terminal header
 const commands: Record<string, string> = {
-  about: "whoami",
-  contact: 'mail -s "Hola"',
-  uses: "cat ~/.uses",
-  now: "cat ~/.now",
-  colophon: "cat ~/.colophon",
+  "sobre-mi": "whoami",
+  contacto: 'mail -s "Hola"',
+  uso: "cat ~/.uso",
+  ahora: "cat ~/.ahora",
 };
 const command = commands[page.slug] || `cat ${page.slug}.md`;
 

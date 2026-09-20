@@ -39,7 +39,7 @@ const tagCounts = tags
 
       <!-- Search Input -->
       <div class="terminal-window mb-10">
-        <TerminalTitlebar path="~/search" />
+        <TerminalTitlebar path="~/buscar" />
         <div class="terminal-content">
           <div class="flex items-center gap-2 font-mono">
             <span class="terminal-prompt">$</span>
@@ -75,7 +75,7 @@ const tagCounts = tags
           {
             tagCounts.map(({ tag, count }) => (
               <a
-                href={`/tags/${tag}`}
+                href={`/etiquetas/${tag}`}
                 class="px-3 py-2 bg-secondary rounded font-mono text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
               >
                 <span>#{tag}</span>

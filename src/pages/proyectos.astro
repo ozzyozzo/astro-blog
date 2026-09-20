@@ -12,7 +12,7 @@ const projects = siteConfig.projects.items;
 <Layout title={`Proyectos | ${siteConfig.title}`}>
   <section class="py-16">
     <div class="container max-w-6xl mx-auto px-6">
-      <TerminalHeader command="ls ~/projects" size="xl" class="mb-4" />
+      <TerminalHeader command="ls ~/proyectos" size="xl" class="mb-4" />
 
       <div class="font-mono text-sm text-muted-foreground mb-10">
         <span class="terminal-prompt">$</span>
@@ -41,7 +41,7 @@ const projects = siteConfig.projects.items;
           </div>
         ) : (
           <div class="terminal-window">
-            <TerminalTitlebar path="~/projects" />
+            <TerminalTitlebar path="~/proyectos" />
             <div class="terminal-content font-mono text-sm">
               <p class="text-muted-foreground">
                 Todavía no hay proyectos publicados aquí. Por ahora, lo que

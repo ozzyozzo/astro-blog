@@ -4,11 +4,11 @@ import TerminalTitlebar from "./TerminalTitlebar.astro";
 
 const navItems = [
   { label: "Inicio", href: "/", shortcut: "I" },
-  { label: "Sobre mí", href: "/about", shortcut: "S" },
+  { label: "Sobre mí", href: "/sobre-mi", shortcut: "S" },
   { label: "Blog", href: "/blog", shortcut: "B" },
-  { label: "Proyectos", href: "/projects", shortcut: "P" },
-  { label: "Buscar", href: "/search", shortcut: "U" },
-  { label: "Archivo", href: "/archives", shortcut: "A" },
+  { label: "Proyectos", href: "/proyectos", shortcut: "P" },
+  { label: "Buscar", href: "/buscar", shortcut: "U" },
+  { label: "Archivo", href: "/archivo", shortcut: "A" },
   { label: "RSS", href: "/rss.xml", shortcut: "R" },
 ];
 ---
@@ -24,7 +24,7 @@ const navItems = [
   <!-- Modal -->
   <div class="relative flex items-start justify-center pt-[20vh]">
     <div class="terminal-window terminal-window-active w-full max-w-lg mx-4">
-      <TerminalTitlebar path="~/palette">
+      <TerminalTitlebar path="~/paleta">
         <span class="text-xs">esc para cerrar</span>
       </TerminalTitlebar>
       <div class="terminal-content">

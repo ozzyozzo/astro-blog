@@ -24,7 +24,7 @@ export const siteConfig = {
     // Core nav items (pages from content/pages are added automatically after these)
     coreNav: [
       { text: "Blog", href: "/blog" },
-      { text: "Proyectos", href: "/projects" },
+      { text: "Proyectos", href: "/proyectos" },
     ],
 
     // Let visitors change the color theme?
@@ -55,12 +55,12 @@ export const siteConfig = {
     // primary: true = filled button
     ctaButtons: [
       { text: "[blog]", href: "/blog", primary: true },
-      { text: "[proyectos]", href: "/projects", primary: false },
-      { text: "[sobre mí]", href: "/about", primary: false },
+      { text: "[proyectos]", href: "/proyectos", primary: false },
+      { text: "[sobre mí]", href: "/sobre-mi", primary: false },
     ],
   },
 
-  // Color theme (see /themes for all options)
+  // Color theme (see /temas for all options)
   theme: {
     // clean-white, catppuccin-mocha, catppuccin-latte, rose-pine, rose-pine-dawn,
     // nord, nord-light, dracula, solarized-dark, solarized-light,
@@ -91,11 +91,11 @@ export const siteConfig = {
     dateFormat: "d 'de' MMMM 'de' yyyy",
   },
 
-  // Your projects (shown on /projects)
+  // Your projects (shown on /proyectos)
   projects: {
     gridColumns: 3,
     showStatus: true,
-    // Agrega aqui tus proyectos. Mientras la lista este vacia, /projects
+    // Agrega aqui tus proyectos. Mientras la lista este vacia, /proyectos
     // muestra un mensaje de "todavia no hay nada publicado".
     items: [] as Project[],
   },
