@@ -92,9 +92,54 @@ export const siteConfig = {
   projects: {
     gridColumns: 3,
     showStatus: true,
-    // Agrega aqui tus proyectos. Mientras la lista este vacia, /proyectos
-    // muestra un mensaje de "todavia no hay nada publicado".
-    items: [] as Project[],
+    items: [
+      {
+        name: "Foco Web",
+        description:
+          "Sitios de una página para oficios y profesionales independientes. El contenido de cada sitio vive en un solo archivo YAML y el código no tiene texto escrito a mano, así que un cambio toma un minuto.",
+        tech: ["Astro", "TypeScript", "Tailwind", "Zod"],
+        status: "active",
+        url: "https://focoweb.cl",
+      },
+      {
+        name: "Foco Web Leads",
+        description:
+          "Busca en Google negocios de oficio que tienen ficha pero no tienen sitio web, los ordena por prioridad y arma una landing de muestra para cada uno antes de escribirles.",
+        tech: ["Python", "SQLite", "Google Places API"],
+        status: "active",
+      },
+      {
+        name: "Foco Web Motion",
+        description:
+          "Plantillas de video para las redes de Foco Web. El isotipo es un componente de React con actitudes y gestos, así que las animaciones se ajustan cambiando números y se renderizan a MP4 desde la terminal.",
+        tech: ["Remotion", "React", "TypeScript"],
+        status: "active",
+        github: "https://github.com/ozzyozzo/focoweb-motion",
+      },
+      {
+        name: "Dash Usados",
+        description:
+          "Un panel para organizar lo que publico de a poco en grupos de Facebook. Tengo muchos artículos y estoy en muchos grupos, y publicar a mano era insoportable.",
+        tech: ["Next.js", "React", "TypeScript", "Tailwind", "shadcn/ui"],
+        status: "active",
+      },
+      {
+        name: "Petermarket",
+        description:
+          "Mi catálogo de productos usados. HTML, CSS y JavaScript sueltos, sin build ni dependencias. Con lo que vendo aquí estoy juntando para un monitor.",
+        tech: ["HTML", "CSS", "JavaScript"],
+        status: "shipped",
+        url: "https://petermarket.vercel.app",
+      },
+      {
+        name: "ozzyozzo",
+        description:
+          "Este blog. Donde anoto cómo es volver a programar con una IA al lado, lo que funciona y lo que se cae.",
+        tech: ["Astro", "TypeScript", "Tailwind", "MDX"],
+        status: "active",
+        github: "https://github.com/ozzyozzo/astro-blog",
+      },
+    ] as Project[],
   },
 
   // Footer
