@@ -1,9 +1,10 @@
+import type { APIContext } from "astro";
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 import { sortPostsByDate, filterDrafts } from "../lib/utils";
 import { siteConfig } from "../config";
 
-export async function GET(context) {
+export async function GET(context: APIContext) {
   const allPosts = await getCollection("blog");
   const posts = sortPostsByDate(filterDrafts(allPosts));
 

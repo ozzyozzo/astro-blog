@@ -9,7 +9,7 @@ interface Props {
 }
 
 const { text, speed = 50, delay = 0, class: className = "" } = Astro.props;
-const id = `typing-${Math.random().toString(36).substr(2, 9)}`;
+const id = `typing-${Math.random().toString(36).slice(2, 11)}`;
 ---
 
 <span

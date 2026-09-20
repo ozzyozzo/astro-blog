@@ -9,6 +9,12 @@ interface Props {
   currentPath?: string;
 }
 
+interface NavItem {
+  href: string;
+  label: string;
+  ariaLabel?: string;
+}
+
 const { currentPath = "/" } = Astro.props;
 
 const pages = await getCollection("pages");
@@ -22,7 +28,7 @@ const pageNavItems = pages
     label: page.data.title.toLowerCase(),
   }));
 
-const navItems = [
+const navItems: NavItem[] = [
   { href: "/", label: "home" },
   ...siteConfig.header.coreNav.map((item) => ({
     href: item.href,

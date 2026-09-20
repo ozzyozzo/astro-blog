@@ -1,12 +1,23 @@
 // Dotfiles Theme Config
 // Edit this file to make it yours
 
+export type ProjectStatus = "active" | "shipped" | "maintenance" | "archived";
+
+export interface Project {
+  name: string;
+  description: string;
+  tech: string[];
+  status: ProjectStatus;
+  url?: string;
+  github?: string;
+}
+
 export const siteConfig = {
   // The basics
   title: "ozzyozzo",
   description: "Peter Castro - Full Stack Dev.",
   author: "Peter Castro",
-  siteUrl: "https://ozzyozzo.vercel.app/",
+  siteUrl: "https://www.ozzyozzo.dev",
 
   // Header navigation
   header: {
@@ -101,7 +112,7 @@ export const siteConfig = {
         status: "shipped",
         github: "https://github.com/you/repo",
       },
-    ],
+    ] as Project[],
   },
 
   // Footer

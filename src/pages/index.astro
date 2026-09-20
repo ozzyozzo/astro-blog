@@ -148,7 +148,7 @@ function parseDescription(desc: string) {
             <BlogCard
               title={post.data.title}
               description={post.data.description}
-              date={post.data.date}
+              date={post.data.date.toISOString()}
               slug={post.slug}
               tags={post.data.tags}
             />
