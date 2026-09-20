@@ -25,7 +25,7 @@ const years = Object.keys(postsByYear)
   .sort((a, b) => b - a);
 ---
 
-<Layout title={`Archives | ${siteConfig.title}`}>
+<Layout title={`Archivo | ${siteConfig.title}`}>
   <section class="py-16">
     <div class="container max-w-4xl mx-auto px-6">
       <TerminalHeader command="history | grep 'post'" size="xl" class="mb-4" />
@@ -34,7 +34,7 @@ const years = Object.keys(postsByYear)
         <span class="terminal-prompt">$</span>
         <span class="terminal-command ml-2">find ./posts -type f | wc -l</span>
         <p class="mt-2">
-          {posts.length} posts spanning {years.length} year{
+          {posts.length} posts a lo largo de {years.length} año{
             years.length !== 1 ? "s" : ""
           }.
         </p>
@@ -54,7 +54,7 @@ const years = Object.keys(postsByYear)
                       datetime={post.data.date.toISOString()}
                       class="text-sm font-mono text-muted-foreground shrink-0 w-24"
                     >
-                      {post.data.date.toLocaleDateString("en-US", {
+                      {post.data.date.toLocaleDateString("es-ES", {
                         month: "short",
                         day: "numeric",
                       })}
@@ -78,7 +78,7 @@ const years = Object.keys(postsByYear)
           href="/blog"
           class="font-mono text-sm text-muted-foreground hover:text-primary transition-colors"
         >
-          ← back to blog
+          ← volver al blog
         </a>
       </div>
     </div>

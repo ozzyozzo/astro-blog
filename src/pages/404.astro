@@ -4,7 +4,7 @@ import TerminalTitlebar from "../components/TerminalTitlebar.astro";
 import { siteConfig } from "../config";
 ---
 
-<Layout title={`404 - Not Found | ${siteConfig.title}`}>
+<Layout title={`404 - No encontrado | ${siteConfig.title}`}>
   <section class="py-16 min-h-[60vh] flex items-center">
     <div class="container max-w-4xl mx-auto px-6">
       <div class="terminal-window terminal-window-active max-w-2xl mx-auto">
@@ -24,12 +24,12 @@ import { siteConfig } from "../config";
           <div class="text-8xl font-bold font-mono text-primary mb-6">404</div>
 
           <p class="text-muted-foreground mb-6">
-            The page you're looking for doesn't exist or has been moved.
+            La página que buscas no existe o fue movida.
           </p>
 
           <div class="mb-4 font-mono text-sm text-muted-foreground">
             <span class="terminal-prompt">$</span>
-            <span class="ml-2">Try one of these:</span>
+            <span class="ml-2">Prueba con alguna de estas:</span>
           </div>
 
           <div class="flex flex-wrap justify-center gap-4 font-mono text-sm">
@@ -37,19 +37,19 @@ import { siteConfig } from "../config";
               href="/"
               class="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
             >
-              [go home]
+              [ir al inicio]
             </a>
             <a
               href="/blog"
               class="px-4 py-2 border border-border rounded hover:bg-card transition-colors"
             >
-              [read blog]
+              [leer el blog]
             </a>
             <a
               href="/projects"
               class="px-4 py-2 border border-border rounded hover:bg-card transition-colors"
             >
-              [view projects]
+              [ver proyectos]
             </a>
           </div>
 

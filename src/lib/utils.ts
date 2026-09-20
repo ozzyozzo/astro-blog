@@ -1,7 +1,7 @@
 // Date and post utilities
 
 export function formatDate(date: Date): string {
-  return date.toLocaleDateString("en-US", {
+  return date.toLocaleDateString("es-ES", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -15,7 +15,7 @@ export function formatDateISO(date: Date): string {
 export function getReadingTime(content: string, wordsPerMinute = 200): string {
   const words = content.trim().split(/\s+/).length;
   const minutes = Math.ceil(words / wordsPerMinute);
-  return `${minutes} min read`;
+  return `${minutes} min de lectura`;
 }
 
 export function slugify(text: string): string {

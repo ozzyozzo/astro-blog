@@ -3,13 +3,13 @@
 import TerminalTitlebar from "./TerminalTitlebar.astro";
 
 const navItems = [
-  { label: "Home", href: "/", shortcut: "H" },
-  { label: "About", href: "/about", shortcut: "A" },
+  { label: "Inicio", href: "/", shortcut: "I" },
+  { label: "Sobre mí", href: "/about", shortcut: "S" },
   { label: "Blog", href: "/blog", shortcut: "B" },
-  { label: "Projects", href: "/projects", shortcut: "P" },
-  { label: "Search", href: "/search", shortcut: "S" },
-  { label: "Archives", href: "/archives", shortcut: "R" },
-  { label: "RSS Feed", href: "/rss.xml", shortcut: "F" },
+  { label: "Proyectos", href: "/projects", shortcut: "P" },
+  { label: "Buscar", href: "/search", shortcut: "U" },
+  { label: "Archivo", href: "/archives", shortcut: "A" },
+  { label: "RSS", href: "/rss.xml", shortcut: "R" },
 ];
 ---
 
@@ -25,7 +25,7 @@ const navItems = [
   <div class="relative flex items-start justify-center pt-[20vh]">
     <div class="terminal-window terminal-window-active w-full max-w-lg mx-4">
       <TerminalTitlebar path="~/palette">
-        <span class="text-xs">esc to close</span>
+        <span class="text-xs">esc para cerrar</span>
       </TerminalTitlebar>
       <div class="terminal-content">
         <div
@@ -35,7 +35,7 @@ const navItems = [
           <input
             type="text"
             id="palette-input"
-            placeholder="Type a command..."
+            placeholder="Escribe un comando..."
             class="flex-1 bg-transparent border-none outline-none text-foreground placeholder:text-muted-foreground/50"
             autocomplete="off"
           />

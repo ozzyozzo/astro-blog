@@ -21,8 +21,8 @@
       const button = document.createElement("button");
       button.className =
         "copy-button absolute top-2 right-2 px-2 py-1 text-xs font-mono bg-secondary text-muted-foreground rounded opacity-0 group-hover:opacity-100 transition-opacity hover:text-primary";
-      button.textContent = "[copy]";
-      button.setAttribute("aria-label", "Copy code");
+      button.textContent = "[copiar]";
+      button.setAttribute("aria-label", "Copiar código");
 
       button.addEventListener("click", async () => {
         const code =
@@ -30,11 +30,11 @@
 
         try {
           await navigator.clipboard.writeText(code);
-          button.textContent = "[copied!]";
+          button.textContent = "[copiado]";
           button.classList.add("text-accent");
 
           setTimeout(() => {
-            button.textContent = "[copy]";
+            button.textContent = "[copiar]";
             button.classList.remove("text-accent");
           }, 2000);
         } catch (err) {
@@ -42,7 +42,7 @@
           button.classList.add("text-destructive");
 
           setTimeout(() => {
-            button.textContent = "[copy]";
+            button.textContent = "[copiar]";
             button.classList.remove("text-destructive");
           }, 2000);
         }

@@ -20,7 +20,7 @@ const tagCounts = tags
   .sort((a, b) => b.count - a.count);
 ---
 
-<Layout title={`Search | ${siteConfig.title}`}>
+<Layout title={`Buscar | ${siteConfig.title}`}>
   <section class="py-16">
     <div class="container max-w-4xl mx-auto px-6">
       <TerminalHeader
@@ -34,7 +34,7 @@ const tagCounts = tags
         <span class="terminal-command ml-2"
           >find . -type f -name "*.md" | xargs grep -l ""</span
         >
-        <p class="mt-2">Search through {posts.length} posts.</p>
+        <p class="mt-2">Busca entre {posts.length} posts.</p>
       </div>
 
       <!-- Search Input -->
@@ -47,7 +47,7 @@ const tagCounts = tags
             <input
               type="text"
               id="search-input"
-              placeholder="search query..."
+              placeholder="buscar..."
               class="flex-1 bg-transparent border-none outline-none text-foreground placeholder:text-muted-foreground/50"
               autocomplete="off"
             />
@@ -62,13 +62,15 @@ const tagCounts = tags
       <!-- No Results Message -->
       <div id="no-results" class="hidden text-center py-8">
         <p class="text-muted-foreground font-mono">
-          No posts found matching your query.
+          No se encontraron posts para tu búsqueda.
         </p>
       </div>
 
       <!-- Default: Browse by Tags -->
       <div id="browse-tags">
-        <h3 class="text-lg font-mono font-semibold mb-4">Browse by tag:</h3>
+        <h3 class="text-lg font-mono font-semibold mb-4">
+          Explorar por etiqueta:
+        </h3>
         <div class="flex flex-wrap gap-3">
           {
             tagCounts.map(({ tag, count }) => (
@@ -104,7 +106,7 @@ const tagCounts = tags
     const browseTags = document.getElementById("browse-tags");
 
     function formatDate(dateStr) {
-      return new Date(dateStr).toLocaleDateString("en-US", {
+      return new Date(dateStr).toLocaleDateString("es-ES", {
         year: "numeric",
         month: "short",
         day: "numeric",

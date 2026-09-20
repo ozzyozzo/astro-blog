@@ -2,13 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import TerminalHeader from "../components/TerminalHeader.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import TerminalTitlebar from "../components/TerminalTitlebar.astro";
 import { siteConfig } from "../config";
 
 // Get projects from config
 const projects = siteConfig.projects.items;
 ---
 
-<Layout title={`Projects | ${siteConfig.title}`}>
+<Layout title={`Proyectos | ${siteConfig.title}`}>
   <section class="py-16">
     <div class="container max-w-6xl mx-auto px-6">
       <TerminalHeader command="ls ~/projects" size="xl" class="mb-4" />
@@ -17,52 +18,72 @@ const projects = siteConfig.projects.items;
         <span class="terminal-prompt">$</span>
         <span class="terminal-command ml-2">git status --short</span>
         <p class="mt-2">
-          Things I've built, maintained, and sometimes abandoned. <span
-            class="text-primary">Open source</span
-          > when possible.
+          Cosas que construí, mantuve y a veces abandoné. <span
+            class="text-primary">Código abierto</span
+          > cuando se puede.
         </p>
       </div>
 
       <!-- 3x3 Grid -->
-      <div class="project-grid">
-        {
-          projects.map((project) => (
-            <ProjectCard
-              name={project.name}
-              description={project.description}
-              tech={project.tech}
-              status={project.status}
-              url={project.url}
-              github={project.github}
-            />
-          ))
-        }
-      </div>
+      {
+        projects.length > 0 ? (
+          <div class="project-grid">
+            {projects.map((project) => (
+              <ProjectCard
+                name={project.name}
+                description={project.description}
+                tech={project.tech}
+                status={project.status}
+                url={project.url}
+                github={project.github}
+              />
+            ))}
+          </div>
+        ) : (
+          <div class="terminal-window">
+            <TerminalTitlebar path="~/projects" />
+            <div class="terminal-content font-mono text-sm">
+              <p class="text-muted-foreground">
+                Todavía no hay proyectos publicados aquí. Por ahora, lo que
+                estoy construyendo aparece en el{" "}
+                <a href="/blog" class="text-primary hover:underline">
+                  blog
+                </a>
+                .
+              </p>
+            </div>
+          </div>
+        )
+      }
 
       <!-- Legend -->
-      <div class="mt-10 pt-6 border-t">
-        <p class="text-muted-foreground font-mono text-xs mb-3">
-          Status Legend:
-        </p>
-        <div class="flex flex-wrap gap-4 font-mono text-xs">
-          <div class="flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-green-500"></span>
-            <span class="text-muted-foreground">Active</span>
+      {
+        projects.length > 0 && (
+          <div class="mt-10 pt-6 border-t">
+            <p class="text-muted-foreground font-mono text-xs mb-3">
+              Leyenda de estados:
+            </p>
+            <div class="flex flex-wrap gap-4 font-mono text-xs">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-green-500" />
+                <span class="text-muted-foreground">Activo</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-blue-500" />
+                <span class="text-muted-foreground">Publicado</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-yellow-500" />
+                <span class="text-muted-foreground">Mantenimiento</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-gray-500" />
+                <span class="text-muted-foreground">Archivado</span>
+              </div>
+            </div>
           </div>
-          <div class="flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-            <span class="text-muted-foreground">Shipped</span>
-          </div>
-          <div class="flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
-            <span class="text-muted-foreground">Maintenance</span>
-          </div>
-          <div class="flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-gray-500"></span>
-            <span class="text-muted-foreground">Archived</span>
-          </div>
-        </div>
-      </div>
+        )
+      }
     </div>
   </section>
 </Layout>

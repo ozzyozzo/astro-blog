@@ -11,10 +11,10 @@ interface Props {
 const { name, description, tech, status, url, github } = Astro.props;
 
 const statusConfig = {
-  active: { color: "bg-green-500", label: "Active" },
-  shipped: { color: "bg-blue-500", label: "Shipped" },
-  maintenance: { color: "bg-yellow-500", label: "Maintenance" },
-  archived: { color: "bg-gray-500", label: "Archived" },
+  active: { color: "bg-green-500", label: "Activo" },
+  shipped: { color: "bg-blue-500", label: "Publicado" },
+  maintenance: { color: "bg-yellow-500", label: "Mantenimiento" },
+  archived: { color: "bg-gray-500", label: "Archivado" },
 };
 
 const { color, label } = statusConfig[status];
@@ -81,13 +81,15 @@ const { color, label } = statusConfig[status];
           href={github}
           class="text-muted-foreground hover:text-primary transition-colors"
         >
-          [code]
+          [código]
         </a>
       )
     }
     {
       !url && !github && (
-        <span class="text-muted-foreground text-xs">No links available</span>
+        <span class="text-muted-foreground text-xs">
+          Sin enlaces disponibles
+        </span>
       )
     }
   </div>

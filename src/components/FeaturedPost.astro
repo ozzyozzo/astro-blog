@@ -11,7 +11,7 @@ interface Props {
 
 const { title, description, date, slug, tags = [] } = Astro.props;
 
-const formattedDate = new Date(date).toLocaleDateString("en-US", {
+const formattedDate = new Date(date).toLocaleDateString("es-ES", {
   year: "numeric",
   month: "long",
   day: "numeric",

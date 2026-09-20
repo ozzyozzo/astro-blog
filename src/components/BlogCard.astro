@@ -11,7 +11,7 @@ const { title, description, date, slug, tags = [] } = Astro.props;
 
 // Format date
 const postDate = new Date(date);
-const formattedDate = postDate.toLocaleDateString("en-US", {
+const formattedDate = postDate.toLocaleDateString("es-ES", {
   year: "numeric",
   month: "short",
   day: "numeric",

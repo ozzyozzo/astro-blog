@@ -24,7 +24,7 @@ export const siteConfig = {
     // Core nav items (pages from content/pages are added automatically after these)
     coreNav: [
       { text: "Blog", href: "/blog" },
-      { text: "Projects", href: "/projects" },
+      { text: "Proyectos", href: "/projects" },
     ],
 
     // Let visitors change the color theme?
@@ -34,7 +34,7 @@ export const siteConfig = {
   // Terminal window chrome (tiling-WM style titlebar)
   terminal: {
     user: "ozzy",
-    host: "archlinux",
+    host: "omarchy",
   },
 
   // Homepage hero
@@ -88,31 +88,16 @@ export const siteConfig = {
     showPostNavigation: true,
     showTags: true,
     showFeaturedPost: true,
-    dateFormat: "MMMM d, yyyy",
+    dateFormat: "d 'de' MMMM 'de' yyyy",
   },
 
   // Your projects (shown on /projects)
   projects: {
     gridColumns: 3,
     showStatus: true,
-    items: [
-      {
-        name: "my-awesome-project",
-        description:
-          "A brief description of what this project does and why it's cool.",
-        tech: ["Astro", "Tailwind", "TypeScript"],
-        status: "active",
-        url: "https://example.com",
-        github: "https://github.com/you/repo",
-      },
-      {
-        name: "another-project",
-        description: "Another great project you've worked on.",
-        tech: ["React", "Node.js"],
-        status: "shipped",
-        github: "https://github.com/you/repo",
-      },
-    ] as Project[],
+    // Agrega aqui tus proyectos. Mientras la lista este vacia, /projects
+    // muestra un mensaje de "todavia no hay nada publicado".
+    items: [] as Project[],
   },
 
   // Footer

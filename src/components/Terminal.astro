@@ -1,6 +1,6 @@
 ---
 // Terminal window wrapper for use in MDX pages
-// Usage: <Terminal title="~/.config">Your content here</Terminal>
+// Usage: <Terminal title="cat .config">Your content here</Terminal>
 // Markdown works inside - just write normally
 import TerminalTitlebar from "./TerminalTitlebar.astro";
 
@@ -11,7 +11,7 @@ const { title = "terminal" } = Astro.props;
 ---
 
 <div class="terminal-window my-8">
-  <TerminalTitlebar path={`~/${title}`} />
+  <TerminalTitlebar path={title} />
   <div class="terminal-content prose prose-terminal max-w-none">
     <slot />
   </div>

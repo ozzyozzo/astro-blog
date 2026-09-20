@@ -29,7 +29,7 @@ const pageNavItems = pages
   }));
 
 const navItems: NavItem[] = [
-  { href: "/", label: "home" },
+  { href: "/", label: "inicio" },
   ...siteConfig.header.coreNav.map((item) => ({
     href: item.href,
     label: item.text.toLowerCase(),
@@ -85,7 +85,7 @@ const navItems: NavItem[] = [
             href="/themes"
             class="font-mono text-sm text-muted-foreground hover:text-primary transition-colors"
           >
-            [themes]
+            [temas]
           </a>
         )
       }
@@ -108,9 +108,9 @@ const navItems: NavItem[] = [
         id="mobile-menu-button"
         class="inline-flex items-center justify-center rounded-md p-2 hover:bg-card hover:text-primary focus:outline-none font-mono text-sm"
         aria-expanded="false"
-        aria-label="Toggle menu"
+        aria-label="Abrir menú"
       >
-        [menu]
+        [menú]
       </button>
     </div>
   </div>
@@ -141,7 +141,7 @@ const navItems: NavItem[] = [
         href="/archives"
         class="px-2 py-2 rounded transition-all hover:bg-primary/10 text-muted-foreground hover:text-primary"
       >
-        [archives]
+        [archivo]
       </a>
       <a
         href="/rss.xml"
@@ -155,7 +155,7 @@ const navItems: NavItem[] = [
             href="/themes"
             class="px-2 py-2 rounded transition-all hover:bg-primary/10 text-muted-foreground hover:text-primary"
           >
-            [themes]
+            [temas]
           </a>
         )
       }

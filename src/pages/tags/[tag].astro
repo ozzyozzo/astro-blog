@@ -42,7 +42,7 @@ const allTags = getUniqueTags(filterDrafts(allPosts));
           >grep -c "{tag}" ./posts/* | grep -v ":0$" | wc -l</span
         >
         <p class="mt-2">
-          {posts.length} post{posts.length !== 1 ? "s" : ""} tagged with <span
+          {posts.length} post{posts.length !== 1 ? "s" : ""} con la etiqueta <span
             class="text-primary">#{tag}</span
           >
         </p>
@@ -65,7 +65,9 @@ const allTags = getUniqueTags(filterDrafts(allPosts));
 
       <!-- Other tags -->
       <div class="pt-6 border-t">
-        <p class="text-muted-foreground font-mono text-xs mb-3">Other tags:</p>
+        <p class="text-muted-foreground font-mono text-xs mb-3">
+          Otras etiquetas:
+        </p>
         <div class="flex flex-wrap gap-2">
           {
             allTags
@@ -88,7 +90,7 @@ const allTags = getUniqueTags(filterDrafts(allPosts));
           href="/blog"
           class="font-mono text-sm text-muted-foreground hover:text-primary transition-colors"
         >
-          ← back to all posts
+          ← volver a todos los posts
         </a>
       </div>
     </div>
