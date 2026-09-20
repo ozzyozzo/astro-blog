@@ -4,10 +4,12 @@ import { passthroughImageService } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
+import { siteConfig } from "./src/config.ts";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com", // Replace with your site URL
+  // Single source of truth: edit siteUrl in src/config.ts
+  site: siteConfig.siteUrl,
   image: {
     service: passthroughImageService(),
   },

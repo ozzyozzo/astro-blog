@@ -55,7 +55,7 @@ La segunda son los conceptos. Contexto, agentes, skills, MCP, hooks, subagentes,
 
 La tercera es el contexto, y es la que más me cansa. Qué fastidio tener que repetirle a la IA lo mismo en cada sesión: quién soy, en qué estoy, cómo me gusta que escriba. Encontré algunas cosas que ayudan. Uso la memoria de Claude Code para guardar lo que más repito, y aparte estoy usando Obsidian.
 
-Bueno, *intentando* usar Obsidian de una forma que me sirva de verdad. Ya pasé por la etapa de armar dashboards nucleares ahí, y fue pura pérdida de tiempo. Dashboard nuclear, cero notas. Ahora voy más tranquilo: tomo notas y trato de seguir mis proyectos desde ahí.
+Bueno, _intentando_ usar Obsidian de una forma que me sirva de verdad. Ya pasé por la etapa de armar dashboards nucleares ahí, y fue pura pérdida de tiempo. Dashboard nuclear, cero notas. Ahora voy más tranquilo: tomo notas y trato de seguir mis proyectos desde ahí.
 
 Hace poco instalé [obsidian-second-brain](https://github.com/eugeniughelbur/obsidian-second-brain), un plugin que conecta Claude Code con Obsidian y que es una bestia. Y desde hoy estoy usando [AI Foundation Framework](https://github.com/PJBoyle1/ai-foundation-framework) para que la IA sepa desde el primer mensaje para quién escribo y cómo. Los dos van a tener su propio post.
 
