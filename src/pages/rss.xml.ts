@@ -12,11 +12,13 @@ export async function GET(context: APIContext) {
     title: `${siteConfig.title} Blog`,
     description: siteConfig.description,
     site: context.site || siteConfig.siteUrl,
+    // Sin barra final, igual que el canonical y el sitemap
+    trailingSlash: false,
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.date,
       description: post.data.description,
-      link: `/blog/${post.slug}/`,
+      link: `/blog/${post.slug}`,
     })),
     customData: `<language>es</language>`,
   });
