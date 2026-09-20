@@ -1,21 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import TerminalHeader from "../components/TerminalHeader.astro";
+import TerminalTitlebar from "../components/TerminalTitlebar.astro";
 import { siteConfig } from "../config";
 ---
 
 <Layout title={`404 - Not Found | ${siteConfig.title}`}>
   <section class="py-16 min-h-[60vh] flex items-center">
     <div class="container max-w-4xl mx-auto px-6">
-      <div class="terminal-window max-w-2xl mx-auto">
-        <div class="terminal-titlebar">
-          <div class="terminal-buttons">
-            <span class="terminal-button terminal-button-red"></span>
-            <span class="terminal-button terminal-button-yellow"></span>
-            <span class="terminal-button terminal-button-green"></span>
-          </div>
-          <span class="text-sm text-muted-foreground font-mono">error</span>
-        </div>
+      <div class="terminal-window terminal-window-active max-w-2xl mx-auto">
+        <TerminalTitlebar path="~/error">
+          <span class="text-destructive">exit 1</span>
+        </TerminalTitlebar>
         <div class="terminal-content text-center">
           <div class="mb-4 font-mono">
             <span class="terminal-prompt">$</span>

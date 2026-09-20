@@ -1,0 +1,43 @@
+---
+// Tiling-WM style titlebar: [workspace] user@host:~/path ... [controls]
+// Usage: <TerminalTitlebar path="~/bienvenido">optional right-side content</TerminalTitlebar>
+import { siteConfig } from "../config";
+
+interface Props {
+  path?: string;
+  workspace?: string | number;
+  showHost?: boolean;
+  class?: string;
+}
+
+const {
+  path = "~",
+  workspace = 1,
+  showHost = true,
+  class: className = "",
+} = Astro.props;
+
+const { user, host } = siteConfig.terminal;
+---
+
+<div class:list={["terminal-titlebar", className]}>
+  <span class="wm-workspace">{workspace}</span>
+  <span class="wm-prompt">
+    {
+      showHost && (
+        <>
+          <span class="wm-host">
+            {user}@{host}
+          </span>
+          <span class="wm-colon">:</span>
+        </>
+      )
+    }
+    <span class="wm-path">{path}</span>
+  </span>
+  <span class="wm-extra"><slot /></span>
+  <span class="wm-controls" aria-hidden="true">
+    <span class="wm-ctl wm-ctl-tile"></span>
+    <span class="wm-ctl wm-ctl-close"></span>
+  </span>
+</div>

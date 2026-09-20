@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import TerminalHeader from "../components/TerminalHeader.astro";
+import TerminalTitlebar from "../components/TerminalTitlebar.astro";
 import { siteConfig } from "../config";
 
 const themes = [
@@ -254,14 +255,7 @@ const darkThemes = themes.filter((t) => t.type === "dark");
 
       <!-- Usage Instructions -->
       <div class="terminal-window">
-        <div class="terminal-titlebar">
-          <div class="terminal-buttons">
-            <span class="terminal-button terminal-button-red"></span>
-            <span class="terminal-button terminal-button-yellow"></span>
-            <span class="terminal-button terminal-button-green"></span>
-          </div>
-          <span class="text-sm text-muted-foreground font-mono">config.ts</span>
-        </div>
+        <TerminalTitlebar path="~/src/config.ts" />
         <div class="terminal-content font-mono text-sm">
           <p class="text-muted-foreground mb-4">
             // To set a default theme, edit src/config.ts:

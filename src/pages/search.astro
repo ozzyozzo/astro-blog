@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import TerminalHeader from "../components/TerminalHeader.astro";
+import TerminalTitlebar from "../components/TerminalTitlebar.astro";
 import { getCollection } from "astro:content";
 import { filterDrafts, getUniqueTags } from "../lib/utils";
 import { siteConfig } from "../config";
@@ -38,14 +39,7 @@ const tagCounts = tags
 
       <!-- Search Input -->
       <div class="terminal-window mb-10">
-        <div class="terminal-titlebar">
-          <div class="terminal-buttons">
-            <span class="terminal-button terminal-button-red"></span>
-            <span class="terminal-button terminal-button-yellow"></span>
-            <span class="terminal-button terminal-button-green"></span>
-          </div>
-          <span class="text-sm text-muted-foreground font-mono">search</span>
-        </div>
+        <TerminalTitlebar path="~/search" />
         <div class="terminal-content">
           <div class="flex items-center gap-2 font-mono">
             <span class="terminal-prompt">$</span>
@@ -147,12 +141,13 @@ const tagCounts = tags
           (post) => `
         <article class="terminal-window">
           <div class="terminal-titlebar">
-            <div class="terminal-buttons">
-              <span class="terminal-button terminal-button-red"></span>
-              <span class="terminal-button terminal-button-yellow"></span>
-              <span class="terminal-button terminal-button-green"></span>
-            </div>
-            <span class="text-sm text-muted-foreground font-mono ml-4">${formatDate(post.date)}</span>
+            <span class="wm-workspace">1</span>
+            <span class="wm-prompt"><span class="wm-path">~/posts/${post.slug}.md</span></span>
+            <span class="wm-extra">${formatDate(post.date)}</span>
+            <span class="wm-controls" aria-hidden="true">
+              <span class="wm-ctl wm-ctl-tile"></span>
+              <span class="wm-ctl wm-ctl-close"></span>
+            </span>
           </div>
           <a href="/blog/${post.slug}" class="block terminal-content hover:bg-secondary/30 transition-colors">
             <h3 class="font-mono font-semibold mb-2 hover:text-primary transition-colors">
@@ -204,38 +199,8 @@ const tagCounts = tags
   .terminal-window {
     background-color: var(--color-card);
     border: 1px solid var(--color-border);
-    border-radius: 0.5rem;
+    border-radius: 3px;
     overflow: hidden;
-  }
-
-  .terminal-titlebar {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1rem;
-    background-color: var(--color-secondary);
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .terminal-buttons {
-    display: flex;
-    gap: 0.5rem;
-  }
-
-  .terminal-button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-  }
-
-  .terminal-button-red {
-    background-color: #ff5f56;
-  }
-  .terminal-button-yellow {
-    background-color: #ffbd2e;
-  }
-  .terminal-button-green {
-    background-color: #27ca40;
   }
 
   .terminal-content {

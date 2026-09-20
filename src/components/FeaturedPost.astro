@@ -1,4 +1,6 @@
 ---
+import TerminalTitlebar from "./TerminalTitlebar.astro";
+
 interface Props {
   title: string;
   description: string;
@@ -17,17 +19,10 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
 ---
 
 <article class="terminal-window group">
-  <div class="terminal-titlebar">
-    <div class="terminal-buttons">
-      <span class="terminal-button terminal-button-red"></span>
-      <span class="terminal-button terminal-button-yellow"></span>
-      <span class="terminal-button terminal-button-green"></span>
-    </div>
-    <span class="text-sm text-primary font-mono ml-4">★ featured</span>
-    <span class="text-sm text-muted-foreground font-mono ml-auto"
-      >{formattedDate}</span
-    >
-  </div>
+  <TerminalTitlebar path={`~/posts/${slug}.md`}>
+    <span class="text-primary">★ featured</span>
+    <span>{formattedDate}</span>
+  </TerminalTitlebar>
   <a
     href={`/blog/${slug}`}
     class="block terminal-content hover:bg-secondary/30 transition-colors"

@@ -1,4 +1,6 @@
 ---
+import TerminalTitlebar from "./TerminalTitlebar.astro";
+
 interface Heading {
   depth: number;
   slug: string;
@@ -18,16 +20,7 @@ const filteredHeadings = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
 {
   filteredHeadings.length > 0 && (
     <nav class="terminal-window mb-8">
-      <div class="terminal-titlebar">
-        <div class="terminal-buttons">
-          <span class="terminal-button terminal-button-red" />
-          <span class="terminal-button terminal-button-yellow" />
-          <span class="terminal-button terminal-button-green" />
-        </div>
-        <span class="text-sm text-muted-foreground font-mono">
-          table of contents
-        </span>
-      </div>
+      <TerminalTitlebar path="~/toc.txt" />
       <div class="terminal-content">
         <div class="mb-2 font-mono text-sm">
           <span class="terminal-prompt">$</span>

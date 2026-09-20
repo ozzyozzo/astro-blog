@@ -20,6 +20,12 @@ export const siteConfig = {
     showThemeSwitcher: false,
   },
 
+  // Terminal window chrome (tiling-WM style titlebar)
+  terminal: {
+    user: "ozzy",
+    host: "archlinux",
+  },
+
   // Homepage hero
   hero: {
     title: "ozzyozzo",
