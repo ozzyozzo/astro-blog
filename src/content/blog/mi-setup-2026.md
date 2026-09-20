@@ -3,7 +3,7 @@ title: "Mi setup de desarrollo en 2026"
 description: "Omarchy, Neovim, Claude Code y una laptop con 8 GB de RAM: con esto estoy volviendo a aprender a programar con IA."
 date: 2026-09-19
 tags: ["herramientas", "setup", "ia"]
-draft: true
+draft: false
 ---
 
 Este es el setup con el que estoy volviendo a aprender a programar, ahora con IA de copiloto. No está optimizado ni es el mejor posible. Es lo que tengo instalado hoy y lo que de verdad uso.
@@ -14,7 +14,7 @@ Este es el setup con el que estoy volviendo a aprender a programar, ahora con IA
 
 - **HP Pavilion Plus 14** con un Intel Core i5-1240P y gráficos Iris Xe integrados.
 - **Pantalla de 2240x1400** a 60 Hz. Es la de la laptop, sin monitor externo.
-- **8 GB de RAM**, de los que el sistema reporta 7,5.
+- **8 GB de RAM**, :__(
 
 Lo de la RAM es el punto débil. Mientras escribía esto había 1,1 GB disponibles, con Chromium, un par de sesiones de Claude Code y el servidor de desarrollo de Astro abiertos. Alcanza, pero hay que cerrar pestañas.
 
@@ -59,7 +59,7 @@ Mi editor es Neovim con la distribución LazyVim. Tengo activados estos extras:
 
 Además uso `diffview.nvim` para revisar diffs, que con IA en el flujo es lo que más hago: leer cambios que no escribí yo.
 
-VS Code también está instalado, con la extensión de Claude Code y un puñado de temas. Casi no aparece en mi historial de terminal.
+VS Code también está instalado, con la extensión de Claude Code y un puñado de temas. Casi no lo uso.
 
 <!-- TODO: ¿cuándo abres VS Code en vez de Neovim? -->
 

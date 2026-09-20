@@ -3,10 +3,10 @@ title: "Volví al código, ahora con canas y una IA de copiloto"
 description: "Dejé la oficina, trabajé con madera y metal, recorrí el país en moto. Ahora vuelvo a programar con Claude Code y este blog es la bitácora."
 date: 2026-09-19
 tags: ["presentación", "ia", "claude-code"]
-draft: true
+draft: false
 ---
 
-Me llamo Peter Castro, vivo en Viña del Mar y hace menos de 20 días que programo con Claude Code. En ese tiempo armé cuatro o cinco proyectos. Un par están terminados y los demás siguen dando vueltas. Hace unos años eso no me lo hubiera creído nadie, empezando por mí.
+Me llamo Peter Castro, vivo en Viña del Mar y desde hace unos días que uso Claude Code. En ese tiempo armé cuatro o cinco proyectos. Un par están terminados y los demás siguen dando vueltas. Hace unos años eso no me lo hubiera creído nadie, empezando por mí.
 
 Este blog es para anotar ese proceso: lo que pruebo, lo que falla y lo que termina funcionando.
 
@@ -51,7 +51,7 @@ Sobre todo voy a escribir sobre lo que no sale. Llevo menos de tres semanas en e
 
 La primera piedra es la cantidad de herramientas. Cada semana aparece un agente nuevo, un plugin nuevo, un CLI nuevo que promete cambiarlo todo, y es muy fácil perderse en el bosque probando cosas en vez de construir.
 
-La segunda son los conceptos. Contexto, agentes, skills, MCP, hooks, subagentes, memoria. Al principio quise aprenderme todo de una vez, y fue una locura. Así que bajé un par de marchas. Ahora voy a paso tranquilo pero constante, y eso me está funcionando mejor que el atracón.
+La segunda son los conceptos. Contexto, agentes, skills, MCP, hooks, subagentes, memoria. Al principio quise aprenderme todo de una vez, y fue una locura. Así que bajé un par de marchas. Ahora voy a paso tranquilo pero constante, y eso me está funcionando bastante bien.
 
 La tercera es el contexto, y es la que más me cansa. Qué fastidio tener que repetirle a la IA lo mismo en cada sesión: quién soy, en qué estoy, cómo me gusta que escriba. Encontré algunas cosas que ayudan. Uso la memoria de Claude Code para guardar lo que más repito, y aparte estoy usando Obsidian.
 
