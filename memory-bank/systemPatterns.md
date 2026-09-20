@@ -181,7 +181,7 @@ Astro builds to `dist/`:
 
 ## File Structure
 
-```
+```text
 src/
   config.ts          ← Single source of truth
   components/        ← 18 reusable components

@@ -154,7 +154,7 @@ projects: {
 
 ## Project Structure
 
-```
+```text
 src/
 ├── config.ts          # Site configuration
 ├── content/

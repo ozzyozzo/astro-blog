@@ -100,9 +100,9 @@ demo: {
 
 ### URLs
 
-- **GitHub**: https://github.com/nabsiddiqui/dotfiles-astro-theme
-- **Live Demo**: https://dotfiles-astro-theme.netlify.app
-- **Submit**: https://portal.astro.build/themes/submit
+- **GitHub**: <https://github.com/nabsiddiqui/dotfiles-astro-theme>
+- **Live Demo**: <https://dotfiles-astro-theme.netlify.app>
+- **Submit**: <https://portal.astro.build/themes/submit>
 
 ### Build Status
 

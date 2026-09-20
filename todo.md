@@ -21,7 +21,7 @@ This theme uses CSS patterns from AstroDeck (MIT licensed). Before uploading to 
 
 - [ ] Write blog post about the theme
 - [ ] Create social media posts (LinkedIn, Bluesky)
-- [ ] Submit to Astro themes directory (https://astro.build/themes/)
+- [ ] Submit to [Astro themes directory](https://astro.build/themes/)
 - [ ] Add demo screenshots to README
 
 ## Files in This Theme
@@ -33,5 +33,5 @@ This theme uses CSS patterns from AstroDeck (MIT licensed). Before uploading to 
 
 ## Credits to Add
 
-- AstroDeck (https://github.com/holger1411/astrodeck) - CSS structure and @theme pattern
-- Full Stack Open (https://fullstackopen.com) - Color palette inspiration
+- [AstroDeck](https://github.com/holger1411/astrodeck) - CSS structure and @theme pattern
+- [Full Stack Open](https://fullstackopen.com) - Color palette inspiration

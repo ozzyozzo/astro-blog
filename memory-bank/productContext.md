@@ -70,7 +70,7 @@ Everything configurable in one place: `src/config.ts`
 
 Shows command-line style headers:
 
-```
+```console
 $ whoami
 $ ls ~/posts
 $ find ./posts -type f

@@ -59,11 +59,11 @@ Live demo at Netlify, code on GitHub. Just needs screenshot + Astro portal submi
 
 ## URLs
 
-| Platform | URL                                                 | Demo Mode     |
-| -------- | --------------------------------------------------- | ------------- |
-| GitHub   | https://github.com/nabsiddiqui/dotfiles-astro-theme | OFF (default) |
-| Netlify  | https://dotfiles-astro-theme.netlify.app            | ON (showcase) |
-| Portal   | https://portal.astro.build/themes/submit            | -             |
+| Platform | URL                                                   | Demo Mode     |
+| -------- | ----------------------------------------------------- | ------------- |
+| GitHub   | <https://github.com/nabsiddiqui/dotfiles-astro-theme> | OFF (default) |
+| Netlify  | <https://dotfiles-astro-theme.netlify.app>            | ON (showcase) |
+| Portal   | <https://portal.astro.build/themes/submit>            | -             |
 
 ## Build Stats
 

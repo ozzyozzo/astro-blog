@@ -94,7 +94,7 @@ Works on any static host:
 
 ## Known Warnings
 
-```
+```text
 /fonts/Geist-Variable.woff2 didn't resolve at build time
 ```
 

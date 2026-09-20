@@ -47,7 +47,7 @@ Make sure the repo is **public**.
 Requirements:
 
 - **Size**: 1200×630px (or similar 1.91:1 ratio)
-- **Format**: PNG or Webe
+- **Format**: PNG or WebP
 - **Content**: Homepage showing the theme in action
 
 Tips:
@@ -63,15 +63,15 @@ Tips:
 3. Click **"Submit Theme"**
 4. Fill in the form:
 
-| Field           | Value                                                                                                                               |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Name**        | Dotfiles                                                                                                                            |
-| **Description** | A terminal-inspired Astro theme with 14 developer-favorite color palettes including Catppuccin, Nord, Dracula, Rosé Pine, and more. |
-| **GitHub URL**  | https://github.com/nabsiddiqui/dotfiles-astro-theme                                                                                 |
-| **Demo URL**    | (your deployed URL)                                                                                                                 |
-| **Categories**  | Blog, Portfolio, Minimal                                                                                                            |
-| **Tools**       | Tailwind, TypeScript                                                                                                                |
-| **Tags**        | terminal, monospace, catppuccin, nord, dracula, dark-mode, light-mode                                                               |
+   | Field           | Value                                                                                                                               |
+   | --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+   | **Name**        | Dotfiles                                                                                                                            |
+   | **Description** | A terminal-inspired Astro theme with 14 developer-favorite color palettes including Catppuccin, Nord, Dracula, Rosé Pine, and more. |
+   | **GitHub URL**  | <https://github.com/nabsiddiqui/dotfiles-astro-theme>                                                                               |
+   | **Demo URL**    | (your deployed URL)                                                                                                                 |
+   | **Categories**  | Blog, Portfolio, Minimal                                                                                                            |
+   | **Tools**       | Tailwind, TypeScript                                                                                                                |
+   | **Tags**        | terminal, monospace, catppuccin, nord, dracula, dark-mode, light-mode                                                               |
 
 5. Upload your screenshot
 6. Submit for review
@@ -97,7 +97,7 @@ Once approved, your theme appears at [astro.build/themes](https://astro.build/th
 
 ### Promote It
 
-- Tweet about it, tag @astaboruild
+- Tweet about it, tag @astrodotbuild
 - Post on Reddit r/astrojs
 - Share on Discord (Astro server)
 - Write a blog post about building it
@@ -127,4 +127,4 @@ Use the Developer Portal to update:
 - RSS, search, SEO
 
 **Hashtags:**
-#astro #webdev #tailwindcss #opensource #theme
+\#astro #webdev #tailwindcss #opensource #theme
