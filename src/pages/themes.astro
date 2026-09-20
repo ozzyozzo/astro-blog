@@ -262,7 +262,7 @@ const darkThemes = themes.filter((t) => t.type === "dark");
           </p>
           <pre
             class="text-foreground"><code>theme: {'{'}
-  defaultTheme: "<span class="text-primary" id="selected-theme-id">clean-white</span>",
+  defaultTheme: "<span class="text-primary" id="selected-theme-id" data-default-theme={siteConfig.theme.defaultTheme}>{siteConfig.theme.defaultTheme}</span>",
 {'}'}</code></pre>
         </div>
       </div>
@@ -307,8 +307,11 @@ const darkThemes = themes.filter((t) => t.type === "dark");
       });
     });
 
-    // Highlight current theme
-    const currentTheme = localStorage.getItem("theme") || "clean-white";
+    // Highlight current theme (falls back to the default from config.ts)
+    const defaultTheme =
+      (selectedThemeDisplay as HTMLElement | null)?.dataset.defaultTheme ||
+      "clean-white";
+    const currentTheme = localStorage.getItem("theme") || defaultTheme;
     cards.forEach((card) => {
       if ((card as HTMLElement).dataset.themeId === currentTheme) {
         card.classList.add("ring-2", "ring-primary");

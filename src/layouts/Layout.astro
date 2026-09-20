@@ -49,6 +49,15 @@ const currentPath = Astro.url.pathname;
         const defaultTheme =
           document.currentScript?.getAttribute("data-default-theme") ||
           "clean-white";
+
+        // A theme picked on /themes is stored in localStorage. If the default
+        // in config.ts changed since then, that stored value is stale: drop it
+        // so editing config.ts actually reaches returning visitors.
+        if (localStorage.getItem("theme-default") !== defaultTheme) {
+          localStorage.setItem("theme-default", defaultTheme);
+          localStorage.removeItem("theme");
+        }
+
         const savedTheme = localStorage.getItem("theme") || defaultTheme;
         const lightThemes = [
           "clean-white",
