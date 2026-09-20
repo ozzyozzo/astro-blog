@@ -2,7 +2,7 @@
 title: "Volví al código, ahora con canas y una IA de copiloto"
 description: "Dejé la oficina, trabajé con madera y metal, recorrí el país en moto. Ahora vuelvo a programar con Claude Code y este blog es la bitácora."
 date: 2026-09-19
-tags: ["presentación", "ia", "claude-code"]
+tags: ["presentacion", "ia", "claude-code"]
 draft: false
 ---
 

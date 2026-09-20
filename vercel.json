@@ -10,6 +10,16 @@
     { "source": "/uses", "destination": "/uso", "permanent": true },
     { "source": "/now", "destination": "/ahora", "permanent": true },
     {
+      "source": "/tags/presentación",
+      "destination": "/etiquetas/presentacion",
+      "permanent": true
+    },
+    {
+      "source": "/tags/presentaci%C3%B3n",
+      "destination": "/etiquetas/presentacion",
+      "permanent": true
+    },
+    {
       "source": "/tags/:tag",
       "destination": "/etiquetas/:tag",
       "permanent": true
