@@ -36,7 +36,7 @@ export const siteConfig = {
 
   // Homepage hero
   hero: {
-    title: "ozzyozzo",
+    title: "peter",
 
     // These rotate with a typewriter effect
     typewriterLines: [
