@@ -114,7 +114,8 @@ const tagCounts = tags
     }
 
     function search(query) {
-      if (!query.trim()) {
+      query = query.trim();
+      if (!query) {
         searchResults.innerHTML = "";
         noResults.classList.add("hidden");
         browseTags.classList.remove("hidden");
