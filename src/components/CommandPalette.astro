@@ -49,6 +49,7 @@ const navItems = [
                   href={item.href}
                   class="palette-item flex items-center justify-between px-3 py-2 rounded hover:bg-secondary transition-colors font-mono text-sm"
                   data-label={item.label.toLowerCase()}
+                  data-shortcut={item.shortcut.toLowerCase()}
                 >
                   <span class="text-foreground">{item.label}</span>
                   <kbd class="text-xs text-muted-foreground px-2 py-0.5 bg-secondary rounded">
@@ -79,13 +80,46 @@ const navItems = [
     const palette = document.getElementById("command-palette");
     const backdrop = document.getElementById("palette-backdrop");
     const input = document.getElementById("palette-input") as HTMLInputElement;
-    const items = document.querySelectorAll(".palette-item");
+    const items = Array.from(
+      document.querySelectorAll<HTMLAnchorElement>(".palette-item"),
+    );
     const trigger = document.getElementById("palette-trigger");
+
+    function visibleItems() {
+      return items.filter(
+        (item) => !item.parentElement?.classList.contains("hidden"),
+      );
+    }
+
+    function setSelected(index: number) {
+      const visible = visibleItems();
+      items.forEach((item) => item.classList.remove("palette-item-active"));
+      if (visible.length === 0) return;
+      const clamped = Math.max(0, Math.min(index, visible.length - 1));
+      visible[clamped].classList.add("palette-item-active");
+    }
+
+    function moveSelection(delta: number) {
+      const visible = visibleItems();
+      if (visible.length === 0) return;
+      const current = visible.findIndex((item) =>
+        item.classList.contains("palette-item-active"),
+      );
+      setSelected((current === -1 ? 0 : current) + delta);
+    }
+
+    function activateSelected() {
+      const active = visibleItems().find((item) =>
+        item.classList.contains("palette-item-active"),
+      );
+      active?.click();
+    }
 
     function openPalette() {
       palette?.classList.remove("hidden");
       input?.focus();
       document.body.style.overflow = "hidden";
+      setSelected(0);
     }
 
     function closePalette() {
@@ -106,10 +140,11 @@ const navItems = [
           li?.classList.add("hidden");
         }
       });
+      setSelected(0);
     }
 
-    // Open with Cmd/Ctrl + K
     document.addEventListener("keydown", (e) => {
+      // Open/close with Cmd/Ctrl + K
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         e.preventDefault();
         if (palette?.classList.contains("hidden")) {
@@ -117,11 +152,41 @@ const navItems = [
         } else {
           closePalette();
         }
+        return;
       }
 
-      // Close with Escape
+      if (palette?.classList.contains("hidden")) return;
+
       if (e.key === "Escape") {
         closePalette();
+        return;
+      }
+
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        moveSelection(1);
+        return;
+      }
+
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
+        moveSelection(-1);
+        return;
+      }
+
+      if (e.key === "Enter") {
+        e.preventDefault();
+        activateSelected();
+        return;
+      }
+
+      if (e.altKey && !e.ctrlKey && !e.metaKey && e.code.startsWith("Key")) {
+        const letter = e.code.slice(3).toLowerCase();
+        const match = items.find((item) => item.dataset.shortcut === letter);
+        if (match) {
+          e.preventDefault();
+          match.click();
+        }
       }
     });
 
@@ -151,5 +216,9 @@ const navItems = [
 
   .terminal-content {
     padding: 1rem;
+  }
+
+  .palette-item-active {
+    background-color: var(--color-secondary);
   }
 </style>
