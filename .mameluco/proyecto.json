@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "project": "ozzyozzo.dev",
+  "task_source": ".mameluco/tareas/",
+  "evidence_dir": ".mameluco/runs/",
+  "runtime": { "node": "24.x", "package_manager": "npm" },
+  "commands": {
+    "install": "npm ci",
+    "dev": "npm run dev -- --host 127.0.0.1 --port <puerto_libre>",
+    "check": "npm run check",
+    "markdown": "npm run lint:md",
+    "build": "npm run build",
+    "serve_build": "npm run preview -- --host 127.0.0.1 --port <puerto_libre>"
+  },
+  "validation": {
+    "required": [
+      "acceptance",
+      "diff_review",
+      "check",
+      "build",
+      "local_build_smoke",
+      "preview_smoke"
+    ],
+    "conditional": {
+      "markdown_changes": "markdown",
+      "ui_changes": ["browser_interaction", "keyboard", "screenshots"]
+    },
+    "viewports": [390, 1440],
+    "test_suite": null,
+    "drafts": "Visibles en DEV; excluidos del build de producción."
+  },
+  "git": {
+    "remote": "origin",
+    "url": "https://github.com/ozzyozzo/astro-blog.git",
+    "base": "main",
+    "branch_prefix": "mameluco/",
+    "protected_branches": ["main"],
+    "commit": "authorized",
+    "push_task_branch": "authorized",
+    "merge": "explicit_human_approval",
+    "force_push": false
+  },
+  "preview": {
+    "provider": "vercel",
+    "project": "ozzyozzo",
+    "scope": "ozzyozzos-projects",
+    "trigger": "git_push",
+    "production_branch": "main",
+    "access": "authenticated; preserve deployment protection",
+    "require_commit_match": true,
+    "production": "explicit_human_approval"
+  },
+  "local": {
+    "existing_dev": "http://astro-blog.home",
+    "existing_port": 8011,
+    "isolation": "Usar puertos libres para worktrees; no cambiar Caddy ni asumir que DEV sirve la rama de tarea."
+  },
+  "limits": {
+    "minutes": 60,
+    "same_failure_without_progress": 3,
+    "concurrent_tasks": 1
+  },
+  "scope_rules": [
+    "No cambiar contenido editorial ni publicar borradores fuera de la tarea.",
+    "No actualizar dependencias del producto como efecto lateral.",
+    "Herramientas temporales de prueba aisladas del package.json del producto.",
+    "Sin escrituras a datos reales ni efectos externos adicionales a Git y Preview."
+  ]
+}
