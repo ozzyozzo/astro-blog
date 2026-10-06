@@ -12,7 +12,7 @@ exteriores. El resaltado también utiliza la consulta original.
 Al ejecutar el fragmento de filtrado extraído del código con un fixture:
 
 - `setup` encuentra el artículo de setup.
-- `  setup  ` no lo encuentra.
+- `"  setup  "` no lo encuentra.
 - El título completo encuentra el artículo.
 - El mismo título con un espacio a cada lado no lo encuentra.
 
@@ -31,7 +31,7 @@ resultados ni el término resaltado.
 
 ## Aceptación
 
-- A1. `setup`, `setup`, `  setup  `, `   setup   ` y `SETUP` devuelven los mismos artículos.
+- A1. `setup`, `setup`, `"  setup  "`, `"   setup   "` y `SETUP` devuelven los mismos artículos.
 - A2. Un título completo y el mismo título con espacios exteriores devuelven el
   mismo artículo.
 - A3. Una consulta vacía o compuesta solo por espacios muestra las etiquetas y
