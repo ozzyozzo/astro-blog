@@ -82,6 +82,9 @@ src/
 Vercel, conectado al repo. El dominio `ozzyozzo.dev` redirige a `www.ozzyozzo.dev`, que es
 el host canónico y el que debe coincidir con `siteUrl` en `src/config.ts`.
 
+Las publicaciones pasan por un PR con una Preview de Vercel. Consulta el
+[procedimiento de publicación](docs/publicacion.md) antes de integrar cambios en `main`.
+
 ## Créditos
 
 Este sitio parte del tema **Dotfiles** de
