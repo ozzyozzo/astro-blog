@@ -43,13 +43,17 @@ para automatizaciones ya existente; este procedimiento no lo utiliza.
 - La integración del PR #1 produjo un despliegue de Production correcto para el
   commit `0d66dce61a55568988e49fce5b1b57f3bc971811`. El dominio público respondió
   HTTP 200. Esto confirma el recorrido de publicación ya realizado.
+- El [PR #7](https://github.com/ozzyozzo/astro-blog/pull/7) se abrió después de activar
+  la regla de `main`. Su estado `Vercel` pasó y la
+  [Preview del PR](https://ozzyozzo-git-chore-publicacion-pr-pre-941a91-ozzyozzos-projects.vercel.app/)
+  respondió HTTP 200 sin autenticación.
 - La API de GitHub confirmó la regla activa en `main`, con `Vercel` como estado
   obligatorio, cero aprobaciones y aplicación a administradores. La API de Vercel
   confirmó la conexión, la rama de Production y las opciones de protección indicadas
   arriba.
 
-La regla de protección se configuró después del PR #1. Su configuración está
-verificada por lectura de la API; el siguiente PR permitirá observar el ciclo
-completo con la regla ya activa. La protección de GitHub controla los cambios que
-llegan por el repositorio. Quienes tengan permisos para desplegar directamente en
-Vercel pueden iniciar un despliegue manual fuera de este procedimiento.
+La regla de protección se configuró después del PR #1. El PR #7 confirma la Preview
+y el check con la regla activa; su despliegue de Production solo podrá comprobarse
+tras una integración manual. La protección de GitHub controla los cambios que llegan
+por el repositorio. Quienes tengan permisos para desplegar directamente en Vercel
+pueden iniciar un despliegue manual fuera de este procedimiento.
