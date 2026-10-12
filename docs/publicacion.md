@@ -1,17 +1,24 @@
-# Publicación mediante revisión local y PR
+# Publicación tras revisión local
 
-La rama `main` es la rama de producción. Prepara la entrada en otra rama y revísala
-en el entorno de desarrollo local, por ejemplo `blog-astro-dev.home`. Allí puedes ver
+## Preparación
+
+La rama `main` es la rama de producción. Prepara cada entrada en una rama separada
+desde el `main` remoto para mantener fuera los cambios locales ajenos. Revísala en
+el entorno de desarrollo local, por ejemplo `blog-astro-dev.home`. Allí puedes ver
 también las entradas con `draft: true`. Aprueba el texto y los metadatos antes de
 marcar como publicable la entrada con `draft: false`.
 
-Abre un PR contra `main` con el cambio aislado, las fuentes consultadas y los resultados
-de los chequeos. La Preview de Vercel puede aparecer, pero no es necesaria para la
-revisión editorial. La protección actual de `main` sí exige el estado técnico `Vercel`
-correcto; si falta o falla, el PR queda bloqueado hasta resolverlo. Integra el PR
-manualmente cuando estés conforme y se cumplan los requisitos técnicos. La integración
-activa el despliegue de Production. Comprueba el resultado en
-<https://www.ozzyozzo.dev/>.
+Ejecuta los chequeos del proyecto y revisa el diff del commit. Si algún chequeo
+falla, resuélvelo o deja claro el problema antes de publicar. Confirma que los
+commits que enviarás a `main` contienen solo los cambios de esta entrada.
+
+## Publicación
+
+Tras la aprobación del autor, envía la rama a `main` con un push normal. Vercel
+despliega Production desde `main`. Comprueba la entrada en
+<https://www.ozzyozzo.dev/> y comunica el resultado. Si el remoto avanzó, integra
+los cambios y vuelve a validar antes de enviar la entrada. No se requiere un PR
+ni una Preview de Vercel para la revisión editorial.
 
 ## Configuración comprobada
 
@@ -29,14 +36,11 @@ Comprobada el 12 de octubre de 2026 para la [incidencia #3](https://github.com/o
 | Integración automática de PR  | Desactivada en GitHub                                                                               |
 
 La [protección de `main`](https://github.com/ozzyozzo/astro-blog/settings/branches)
-exige un PR y el estado `Vercel` correcto. El estado debe corresponder a la versión
-actual de `main` (`strict: true`). La regla también se aplica a administradores, no
-permite pushes forzados ni eliminar la rama y exige **cero aprobaciones de otra
-persona**. El autor decide cuándo integrar el PR; un push directo a `main` no cumple
-la regla.
+permite el push directo tras la revisión local. No exige PR ni el estado `Vercel`;
+sí impide los pushes forzados y la eliminación de la rama y se aplica a
+administradores. La aprobación editorial ocurre antes del push.
 
-La URL de Preview, cuando se genera, es pública para quien la conozca. Los cambios de
-un PR pueden verse antes de la integración.
+La URL de Preview, cuando se genera para una rama, es pública para quien la conozca.
 La protección de forks permanece activa. Vercel conserva un secreto de excepción
 para automatizaciones ya existente; este procedimiento no lo utiliza.
 
@@ -58,8 +62,7 @@ para automatizaciones ya existente; este procedimiento no lo utiliza.
   confirmó la conexión, la rama de Production y las opciones de protección indicadas
   arriba.
 
-La regla de protección se configuró después del PR #1. El PR #7 confirma la Preview
-y el check con la regla activa; su despliegue de Production solo podrá comprobarse
-tras una integración manual. La protección de GitHub controla los cambios que llegan
-por el repositorio. Quienes tengan permisos para desplegar directamente en Vercel
-pueden iniciar un despliegue manual fuera de este procedimiento.
+La regla que exigía PR y el check `Vercel` se configuró después del PR #1 y se
+retiró al adoptar la revisión local. El PR #7 confirmó el funcionamiento de esa
+regla mientras estuvo activa. Quienes tengan permisos para desplegar directamente
+en Vercel pueden iniciar un despliegue manual fuera de este procedimiento.
