@@ -38,11 +38,11 @@ export function sortPostsByDate<T extends { data: { date: Date } }>(
   return posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 }
 
-// Only show drafts in dev
+// Vercel builds both Preview and Production with Astro in production mode.
 export function filterDrafts<T extends { data: { draft?: boolean } }>(
   posts: T[],
 ): T[] {
-  return import.meta.env.PROD
-    ? posts.filter((post) => !post.data.draft)
-    : posts;
+  const showDrafts = process.env.VERCEL_ENV === "preview" ||
+    (!process.env.VERCEL_ENV && import.meta.env.DEV);
+  return showDrafts ? posts : posts.filter((post) => !post.data.draft);
 }
