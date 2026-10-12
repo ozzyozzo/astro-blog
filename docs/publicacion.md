@@ -20,6 +20,12 @@ despliega Production desde `main`. Comprueba la entrada en
 los cambios y vuelve a validar antes de enviar la entrada. No se requiere un PR
 ni una Preview de Vercel para la revisión editorial.
 
+El push integra el commit directamente en `main`; no requiere una operación
+`merge`. Después de confirmar que el commit está en `origin/main` y que la URL
+pública responde, vuelve a la rama activa antes de la tarea y elimina la rama de
+trabajo con `git branch -d <rama>`. Si no puedes confirmar la publicación o Git
+rechaza la eliminación, conserva la rama e informa el motivo.
+
 ## Configuración comprobada
 
 Comprobada el 12 de octubre de 2026 para la [incidencia #3](https://github.com/ozzyozzo/astro-blog/issues/3):
