@@ -1,11 +1,17 @@
-# Publicación mediante PR y Preview
+# Publicación mediante revisión local y PR
 
-La rama `main` es la rama de producción. Prepara los cambios en otra rama y abre un PR
-contra `main`. Vercel publica una Preview de cada cambio del PR y deja el enlace en un
-comentario. Revisa el contenido en esa URL y comprueba que el estado `Vercel` sea
-correcto. Si haces ajustes, espera la nueva Preview y vuelve a revisarla. Integra el
-PR manualmente cuando estés conforme; la integración activa el despliegue de
-Production. Comprueba el resultado en <https://www.ozzyozzo.dev/>.
+La rama `main` es la rama de producción. Prepara la entrada en otra rama y revísala
+en el entorno de desarrollo local, por ejemplo `blog-astro-dev.home`. Allí puedes ver
+también las entradas con `draft: true`. Aprueba el texto y los metadatos antes de
+marcar como publicable la entrada con `draft: false`.
+
+Abre un PR contra `main` con el cambio aislado, las fuentes consultadas y los resultados
+de los chequeos. La Preview de Vercel puede aparecer, pero no es necesaria para la
+revisión editorial. La protección actual de `main` sí exige el estado técnico `Vercel`
+correcto; si falta o falla, el PR queda bloqueado hasta resolverlo. Integra el PR
+manualmente cuando estés conforme y se cumplan los requisitos técnicos. La integración
+activa el despliegue de Production. Comprueba el resultado en
+<https://www.ozzyozzo.dev/>.
 
 ## Configuración comprobada
 
@@ -29,8 +35,8 @@ permite pushes forzados ni eliminar la rama y exige **cero aprobaciones de otra
 persona**. El autor decide cuándo integrar el PR; un push directo a `main` no cumple
 la regla.
 
-La URL de Preview es pública para quien la conozca. Los cambios de un PR, incluso
-los borradores que se muestren en Preview, pueden verse antes de la integración.
+La URL de Preview, cuando se genera, es pública para quien la conozca. Los cambios de
+un PR pueden verse antes de la integración.
 La protección de forks permanece activa. Vercel conserva un secreto de excepción
 para automatizaciones ya existente; este procedimiento no lo utiliza.
 
