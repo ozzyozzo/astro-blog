@@ -3,7 +3,7 @@ title: "Aprendiendo a trabajar con varios agentes"
 description: "Mis primeras pruebas con un flujo de varios agentes: qué delegué, qué corrigió la revisión y dónde sigo necesitando criterio propio."
 date: 2026-10-12
 tags: ["ia", "agentes", "aprendizaje"]
-draft: true
+draft: false
 ---
 
 Hace poco escribí que intenté aprender de golpe qué eran los agentes, las skills, los subagentes y la memoria. Terminé con más pestañas abiertas que ideas claras. Ahora estoy probando algo más pequeño: tomar una tarea real, dejar que un agente haga una parte y pedirle a otro que revise el resultado. Así puedo ver dónde ayuda el flujo y dónde me toca seguir pensando a mí.
